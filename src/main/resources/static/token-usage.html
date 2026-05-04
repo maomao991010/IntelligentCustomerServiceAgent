@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token 用量管理</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .admin-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 32px;
+        }
+        
+        .page-header-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #7c3aed 100%);
+            padding: 40px;
+            border-radius: 24px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.4);
+        }
+        
+        .page-header-section h1 {
+            margin: 0;
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .page-header-section h1::before {
+            content: '🔋';
+            font-size: 40px;
+        }
+        
+        .content-container {
+            background: var(--white);
+            padding: 48px;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.08);
+        }
+        
+        .stats-section {
+            margin-bottom: 48px;
+        }
+        
+        .stats-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .progress-container {
+            margin-bottom: 32px;
+        }
+        
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .progress-label {
+            font-weight: 600;
+            color: #374151;
+            font-size: 15px;
+        }
+        
+        .progress-value {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--primary-color);
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 24px;
+            background: #f1f5f9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color) 0%, #7c3aed 100%);
+            transition: width 0.5s ease;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 12px;
+            color: white;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        
+        .progress-fill.warning {
+            background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+        }
+        
+        .progress-fill.danger {
+            background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+        }
+        
+        .info-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 28px;
+            border-radius: 18px;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .info-card-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+        
+        .info-card-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1e293b;
+        }
+        
+        .info-card-value.exceeded {
+            color: #dc2626;
+        }
+        
+        .info-card-value.ok {
+            color: #10b981;
+        }
+        
+        .actions-section {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 2px solid #f1f5f9;
+        }
+        
+        .btn {
+            padding: 14px 32px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #7c3aed 100%);
+            color: white;
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #64748b;
+            font-size: 16px;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 40px 20px;
+            color: #dc2626;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">🎫 后台管理</div>
+                <div class="nav-links">
+                    <a href="admin-home.html" class="nav-link">演唱会管理</a>
+                    <a href="admin.html" class="nav-link">添加/编辑演唱会</a>
+                    <a href="faq-admin.html" class="nav-link">FAQ 管理</a>
+                    <a href="token-usage.html" class="nav-link active">Token 用量</a>
+                    <a href="role-manage.html" class="nav-link">角色管理</a>
+                    <a href="permission-manage.html" class="nav-link">权限管理</a>
+                    <a href="user-role-assign.html" class="nav-link">用户角色</a>
+                    <a href="role-permission-assign.html" class="nav-link">角色权限</a>
+                    <a href="user-info.html" class="nav-link">👤 个人信息</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="admin-container">
+                <div class="page-header-section">
+                    <h1>Token 用量管理</h1>
+                </div>
+                
+                <div class="content-container">
+                    <div id="tokenStats">
+                        <div class="loading">加载中...</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const API_BASE_URL = '/api/v1';
+
+        function getAuthHeaders() {
+            const token = localStorage.getItem('token');
+            const headers = {
+                'Content-Type': 'application/json'
+            };
+            if (token) {
+                headers['Authorization'] = 'Bearer ' + token;
+            }
+            return headers;
+        }
+
+        async function loadTokenUsage() {
+            const container = document.getElementById('tokenStats');
+            
+            try {
+                const response = await fetch(API_BASE_URL + '/admin/token/usage', {
+                    method: 'GET',
+                    headers: getAuthHeaders()
+                });
+                
+                const data = await response.json();
+                
+                if (data.code === 200) {
+                    renderTokenStats(data.data);
+                } else {
+                    container.innerHTML = `<div class="error">加载失败：${data.message}</div>`;
+                }
+            } catch (error) {
+                console.error('加载失败:', error);
+                container.innerHTML = `<div class="error">加载失败，请稍后重试</div>`;
+            }
+        }
+
+        function renderTokenStats(info) {
+            let progressClass = '';
+            if (info.usagePercent >= 90) {
+                progressClass = 'danger';
+            } else if (info.usagePercent >= 70) {
+                progressClass = 'warning';
+            }
+            
+            const exceededClass = info.exceeded ? 'exceeded' : 'ok';
+            const exceededText = info.exceeded ? '已超限' : '正常';
+            
+            document.getElementById('tokenStats').innerHTML = `
+                <div class="stats-section">
+                    <div class="stats-title">📊 Token 使用情况</div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span class="progress-label">本月使用量</span>
+                            <span class="progress-value">${formatNumber(info.currentUsage)} / ${formatNumber(info.maxTokens)}</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill ${progressClass}" style="width: ${Math.min(info.usagePercent, 100)}%">
+                                ${info.usagePercent.toFixed(1)}%
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-card-title">🔌 功能状态</div>
+                            <div class="info-card-value ${exceededClass}">${exceededText}</div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-card-title">⚙️ 限制功能</div>
+                            <div class="info-card-value">${info.enabled ? '已启用' : '已禁用'}</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="actions-section">
+                    <button class="btn btn-primary" onclick="loadTokenUsage()">🔄 刷新数据</button>
+                    <button class="btn btn-danger perm-token-reset" onclick="resetTokenUsage()" style="margin-left: 16px; display: none;">🗑️ 重置使用量</button>
+                </div>
+            `;
+        }
+
+        async function resetTokenUsage() {
+            if (!confirm('确定要重置本月 Token 使用量吗？')) {
+                return;
+            }
+            
+            try {
+                const response = await fetch(API_BASE_URL + '/admin/token/reset', {
+                    method: 'POST',
+                    headers: getAuthHeaders()
+                });
+                
+                const data = await response.json();
+                
+                if (data.code === 200) {
+                    alert('重置成功！');
+                    loadTokenUsage();
+                } else {
+                    alert('重置失败：' + data.message);
+                }
+            } catch (error) {
+                console.error('重置失败:', error);
+                alert('重置失败，请稍后重试');
+            }
+        }
+
+        function formatNumber(num) {
+            return num.toLocaleString('zh-CN');
+        }
+
+        window.onload = function() {
+            loadTokenUsage();
+            if (typeof applyPermissionControls === 'function') applyPermissionControls();
+        };
+
+        document.addEventListener('permissionsLoaded', function() {
+            if (typeof applyPermissionControls === 'function') applyPermissionControls();
+        });
+    </script>
+    <script src="js/auth-check.js"></script>
+    <script src="js/user-info.js"></script>
+</body>
+</html>

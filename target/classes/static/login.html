@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理 - 登录</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .login-card {
+            background: white;
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .login-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .login-header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .login-header h1::before {
+            content: '🎫';
+            font-size: 36px;
+        }
+        
+        .login-header p {
+            margin: 12px 0 0 0;
+            color: #64748b;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #374151;
+            font-size: 14px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+            box-sizing: border-box;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+        }
+        
+        .btn-login {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #7c3aed 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+        }
+        
+        .btn-login:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .error-message {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 12px 16px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            display: none;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        .captcha-container {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+        }
+        
+        .captcha-container .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+        
+        .captcha-img-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .captcha-img {
+            height: 56px;
+            border-radius: 12px;
+            border: 2px solid #e2e8f0;
+            cursor: pointer;
+            background: #f8fafc;
+        }
+        
+        .refresh-tip {
+            font-size: 12px;
+            color: #64748b;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>后台管理系统</h1>
+                <p>请登录以继续</p>
+            </div>
+            
+            <div class="error-message" id="errorMessage"></div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="account">👤 手机号/邮箱</label>
+                    <input type="text" id="account" class="form-input" placeholder="请输入手机号或邮箱" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">🔒 密码</label>
+                    <input type="password" id="password" class="form-input" placeholder="请输入密码" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>🔢 验证码</label>
+                    <div class="captcha-container">
+                        <div class="form-group">
+                            <input type="text" id="verificationCode" class="form-input" placeholder="请输入验证码" required>
+                        </div>
+                        <div class="captcha-img-wrapper">
+                            <img id="captchaImg" class="captcha-img" alt="验证码" title="点击刷新验证码" onclick="refreshCaptcha()">
+                            <span class="refresh-tip">点击刷新</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-login" id="loginBtn">✨ 登录</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = '/api/v1';
+        let currentCodeId = null;
+        
+        async function refreshCaptcha() {
+            try {
+                const response = await fetch(API_BASE_URL + '/auth/verification-code', {
+                    method: 'GET'
+                });
+                const data = await response.json();
+                if (data.code === 200 && data.data) {
+                    document.getElementById('captchaImg').src = data.data.imageUrl;
+                    currentCodeId = data.data.codeId;
+                }
+            } catch (error) {
+                console.error('获取验证码失败:', error);
+            }
+        }
+        
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const account = document.getElementById('account').value;
+            const password = document.getElementById('password').value;
+            const verificationCode = document.getElementById('verificationCode').value;
+            const loginBtn = document.getElementById('loginBtn');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            if (!currentCodeId) {
+                errorMessage.textContent = '验证码未加载，请刷新页面重试';
+                errorMessage.classList.add('show');
+                refreshCaptcha();
+                return;
+            }
+            
+            loginBtn.disabled = true;
+            loginBtn.textContent = '登录中...';
+            errorMessage.classList.remove('show');
+            
+            const loginData = {
+                password: password,
+                verificationCode: verificationCode,
+                codeId: currentCodeId
+            };
+            
+            if (account.includes('@')) {
+                loginData.email = account;
+            } else {
+                loginData.phone = account;
+            }
+            
+            try {
+                const response = await fetch(API_BASE_URL + '/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(loginData)
+                });
+                
+                const data = await response.json();
+                
+                if (data.code === 200) {
+                    const tokenData = data.data;
+                    localStorage.setItem('token', tokenData.token);
+                    localStorage.setItem('userInfo', JSON.stringify(tokenData.userInfo));
+                    
+                    if (tokenData.permissions) {
+                        localStorage.setItem('permissions', JSON.stringify(tokenData.permissions));
+                    }
+                    if (tokenData.roles) {
+                        localStorage.setItem('roles', JSON.stringify(tokenData.roles));
+                    }
+                    
+                    var roles = tokenData.roles || [];
+                    var permissions = tokenData.permissions || [];
+                    var adminRoles = ['ADMIN', 'OPERATOR', 'CUSTOMER_SERVICE'];
+                    var adminPerms = [
+                        'activity:add', 'activity:edit', 'activity:delete',
+                        'faq:add', 'faq:edit', 'faq:delete',
+                        'role:view', 'role:add', 'role:edit', 'role:delete', 'role:assign',
+                        'permission:view', 'permission:add', 'permission:edit', 'permission:delete', 'permission:assign',
+                        'token:reset', 'refund:audit', 'refund:view'
+                    ];
+                    
+                    var hasAdminAccess = false;
+                    for (var i = 0; i < roles.length; i++) {
+                        if (adminRoles.indexOf(roles[i]) !== -1) {
+                            hasAdminAccess = true;
+                            break;
+                        }
+                    }
+                    if (!hasAdminAccess) {
+                        for (var i = 0; i < permissions.length; i++) {
+                            if (permissions[i] === '*:*:*') {
+                                hasAdminAccess = true;
+                                break;
+                            }
+                            for (var j = 0; j < adminPerms.length; j++) {
+                                if (permissions[i] === adminPerms[j]) {
+                                    hasAdminAccess = true;
+                                    break;
+                                }
+                            }
+                            if (hasAdminAccess) break;
+                        }
+                    }
+                    
+                    if (hasAdminAccess) {
+                        window.location.href = 'admin-home.html';
+                    } else {
+                        window.location.href = 'index.html';
+                    }
+                } else {
+                    errorMessage.textContent = data.message || '登录失败，请检查账号和密码';
+                    errorMessage.classList.add('show');
+                    refreshCaptcha();
+                }
+            } catch (error) {
+                console.error('登录失败:', error);
+                errorMessage.textContent = '网络错误，请稍后重试';
+                errorMessage.classList.add('show');
+                refreshCaptcha();
+            } finally {
+                loginBtn.disabled = false;
+                loginBtn.textContent = '✨ 登录';
+            }
+        });
+        
+        document.getElementById('password').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('loginForm').dispatchEvent(new Event('submit'));
+            }
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            refreshCaptcha();
+            
+            var urlParams = new URLSearchParams(window.location.search);
+            var errorMsg = urlParams.get('error');
+            if (errorMsg) {
+                var errorMessage = document.getElementById('errorMessage');
+                errorMessage.textContent = decodeURIComponent(errorMsg);
+                errorMessage.classList.add('show');
+            }
+        });
+    </script>
+</body>
+</html>

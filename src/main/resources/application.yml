@@ -1,0 +1,196 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ticketing_system?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&cachePrepStmts=true&useServerPrepStmts=true&prepStmtCacheSize=250&prepStmtCacheSqlLimit=2048&rewriteBatchedStatements=true
+    username:
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      pool-name: TicketingHikariPool
+      minimum-idle: 10
+      maximum-pool-size: 30
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+      leak-detection-threshold: 60000
+
+  data:
+    redis:
+      host:
+      port:
+      password:
+      database: 0
+  rabbitmq:
+    host:
+    port:
+    username:
+    password:
+    virtual-host: /
+
+  mail:
+    host:
+    port:
+    username:
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            trust: "*"
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: public
+        group: DEFAULT_GROUP
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: com.ticketing.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 日志配置
+logging:
+  level:
+    com.ticketing: debug
+    com.baomidou.mybatisplus: debug
+    org.apache.ibatis: debug
+
+# Knife4j API文档配置
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: '票务系统'
+      paths-to-match: '/**'
+      packages-to-scan: com.ticketing.controller
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+    enable-version: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+jwt:
+  secret: dGhpcy1pcy1teS1zZWNyZXQta2V5LWZvci1qd3QtdG9rZW4=
+  expire: 3600
+  refresh-expire: 86400
+
+# 系统配置
+ticketing:
+  seat-lock-timeout: 1800 # 座位锁定超时时间（秒）
+  max-seats-per-order: 5 # 每单最大选座数
+  seat-rate-limit: 100 # 单用户每分钟最多锁定请求数
+  rate-limit:
+    ip: 500 # IP每分钟最多请求数
+    user: 1000 # 用户每分钟最多请求数
+  verification-code-expire: 300 # 验证码过期时间（秒）
+  slow-sql-threshold: 1000 # 慢SQL阈值（毫秒）
+  slow-sql-log-enabled: true # 是否启用慢SQL日志
+
+# MinIO配置
+minio:
+  endpoint:
+  access-key:
+  secret-key:
+  bucket-name:
+
+# AI客服配置
+ai:
+  customer-service:
+    enabled: true
+    # 模型提供商：deepseek（DeepSeek）、dashscope（通义千问）或 qianfan（文心一言）
+    provider: deepseek
+    # DeepSeek配置（默认）
+    deepseek:
+      # 请在此处直接填入您的 DeepSeek API Key，或通过环境变量 DEEPSEEK_API_KEY 配置
+      # 获取地址：https://platform.deepseek.com/
+      api-key: ${DEEPSEEK_API_KEY:}
+      base-url: https://api.deepseek.com
+      model-name: deepseek-chat
+      temperature: 0.7
+      max-tokens: 1000
+    # 通义千问API Key（备用）
+    dashscope:
+      # 请在此处直接填入您的通义千问 API Key，或通过环境变量 DASHSCOPE_API_KEY 配置
+      # 获取地址：https://dashscope.console.aliyun.com/
+      # 向量嵌入模型推荐使用：text-embedding-v3 或 qwen3-vl-embedding
+      api-key: ${DASHSCOPE_API_KEY:}
+      model-name: qwen-turbo
+      temperature: 0.7
+      max-tokens: 1000
+    # 文心一言配置（备用）
+    qianfan:
+      api-key: ${QIANFAN_API_KEY:}
+      secret-key: ${QIANFAN_SECRET_KEY:}
+      model-name: ERNIE-Bot-turbo
+    # 知识库配置
+    knowledge-base:
+      enable-ai-fallback: true  # 知识库没有匹配时，启用AI生成回答
+      confidence-threshold: 0.6
+    # 对话配置
+    chat:
+      max-history-size: 10
+      session-timeout: 1800
+    # Token使用量限制配置
+    token-limit:
+      enabled: true
+      max-tokens: 1000000  # 最大token使用量（100万）
+      reset-cron: "0 0 0 1 * ?"  # 每月1号零点重置
+    # 向量检索配置
+    vector-store:
+      enabled: true
+      # 向量存储提供商：qdrant（推荐）或 chroma
+      provider: qdrant
+      # 向量嵌入模型提供商：
+      # - ollama: 使用本地 Ollama 模型（推荐本地部署）
+      # - dashscope: 使用通义千问原生 API（QwenEmbeddingModel）
+      # - dashscope-openai: 使用阿里云百炼 OpenAI 兼容接口（OpenAiEmbeddingModel）
+      # - deepseek: 使用 DeepSeek API
+      embedding-provider: auto
+      # 向量嵌入模型名称：
+      # ollama 模式：nomic-embed-text、all-minilm、mxbai-embed-large 等
+      # dashscope 模式：text-embedding-v4（最新）、text-embedding-v3、text-embedding-v2、text-embedding-v1
+      # dashscope-openai 模式：text-embedding-v4（最新）、text-embedding-v3、text-embedding-v2、text-embedding-v1
+      embedding-model-name: bge-m3
+      dimension: 1024
+      # 本地 Ollama 配置（embedding-provider=ollama 时使用）
+      ollama:
+        base-url: http://localhost:11434
+      # 阿里云百炼 OpenAI 兼容接口配置（embedding-provider=dashscope-openai 时使用）
+      dashscope-openai:
+        base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+        embedding-model-name: text-embedding-v4
+        dimensions: 1024
+      qdrant:
+        # Qdrant 服务器地址
+        host: 106.54.15.105
+        # Qdrant gRPC端口（用于存储操作）
+        port: 6334
+        # Qdrant HTTP端口（用于搜索操作）
+        http-port: 6333
+        # 集合名称
+        collection-name: ticketing-faq
+        # API Key（如需要），或通过环境变量 QDRANT_API_KEY 配置
+        api-key: ${QDRANT_API_KEY:}
+      # 向量相似度阈值（0-1，越高越严格）
+      similarity-threshold: 0.7

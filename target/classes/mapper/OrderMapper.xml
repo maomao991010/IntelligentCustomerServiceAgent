@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ticketing.dao.OrderDao">
+    <select id="selectByOrderId" resultType="com.ticketing.entity.Order">
+        SELECT * FROM `order` WHERE order_id = #{orderId}
+    </select>
+    <select id="selectByLockOrderId" resultType="com.ticketing.entity.Order">
+        SELECT * FROM `order` WHERE lock_order_id = #{lockOrderId}
+    </select>
+    <select id="selectByUserId" resultType="com.ticketing.entity.Order">
+        SELECT * FROM `order` WHERE user_id = #{userId} ORDER BY create_time DESC
+    </select>
+    <select id="selectByStatus" resultType="com.ticketing.entity.Order">
+        SELECT * FROM `order` WHERE order_status = #{status}
+    </select>
+    
+    <select id="selectOrderPageWithSearch" resultType="com.ticketing.entity.Order">
+        SELECT o.* FROM `order` o
+        LEFT JOIN `session` s ON o.session_id = s.id
+        WHERE o.user_id = #{userId}
+        <if test="keyword != null and keyword != ''">
+            AND (
+                o.order_id LIKE CONCAT('%', #{keyword}, '%')
+                OR o.activity_name LIKE CONCAT('%', #{keyword}, '%')
+                OR o.venue LIKE CONCAT('%', #{keyword}, '%')
+                OR s.artist LIKE CONCAT('%', #{keyword}, '%')
+            )
+        </if>
+        ORDER BY o.create_time DESC
+    </select>
+</mapper>

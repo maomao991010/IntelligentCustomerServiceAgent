@@ -1,0 +1,367 @@
+2026-04-25 17:29:09.641 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-25 17:29:09.698 [main] INFO  com.ticketing.TicketingSystemApplication - Starting TicketingSystemApplication using Java 17.0.14 with PID 62244 (D:\java-project\mianshiXM\04gaiv1\target\classes started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-25 17:29:09.700 [main] INFO  com.ticketing.TicketingSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-25 17:29:12.612 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-25 17:29:12.615 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-25 17:29:12.662 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2026-04-25 17:29:12.908 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=37d188b1-0f6e-357f-bcf9-f5b469b6f7e1
+2026-04-25 17:29:13.513 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-25 17:29:13.524 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-25 17:29:13.526 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-25 17:29:13.526 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-25 17:29:13.582 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2026-04-25 17:29:13.582 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3839 ms
+2026-04-25 17:29:13.953 [main] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-25 17:29:14.544 [main] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-25 17:29:15.261 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 初始化向量存储服务...
+2026-04-25 17:29:15.261 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 根据配置初始化嵌入模型: embeddingProvider=auto
+2026-04-25 17:29:15.261 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 尝试初始化本地 Ollama 嵌入模型...
+2026-04-25 17:29:19.746 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用本地 Ollama 嵌入模型成功: baseUrl=http://localhost:11434, modelName=bge-m3
+2026-04-25 17:29:20.184 [main] INFO  com.ticketing.agent.vector.VectorStoreService - Qdrant 向量存储初始化成功: host=106.54.15.105, httpPort=6333, collectionName=ticketing-faq, modelType=OLLAMA
+2026-04-25 17:29:20.882 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Starting...
+2026-04-25 17:29:21.476 [main] INFO  com.zaxxer.hikari.pool.HikariPool - TicketingHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@687274e2
+2026-04-25 17:29:21.479 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Start completed.
+2026-04-25 17:29:22.238 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用HTTP API获取向量库已有FAQ ID
+2026-04-25 17:29:22.410 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 成功获取向量库已有FAQ数量: 110
+2026-04-25 17:29:22.410 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 向量库中已有 FAQ 数量: 110
+2026-04-25 17:29:22.412 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 所有 FAQ 已存在于向量库，跳过添加
+2026-04-25 17:29:22.412 [main] INFO  com.ticketing.service.ChatService - 初始化向量存储完成，加载 FAQ 数量: 110
+2026-04-25 17:29:23.614 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-04-25 17:29:24.080 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18390087, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@dc6e8d9, org.springframework.security.web.context.SecurityContextHolderFilter@406d9443, org.springframework.security.web.header.HeaderWriterFilter@610fcd51, org.springframework.web.filter.CorsFilter@44e79e9e, org.springframework.security.web.authentication.logout.LogoutFilter@771be979, com.ticketing.config.RateLimitFilter@61bf405d, com.ticketing.config.JwtAuthenticationFilter@1a819901, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@116826f1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7899948d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@164e5387, org.springframework.security.web.session.SessionManagementFilter@3a0efd2d, org.springframework.security.web.access.ExceptionTranslationFilter@41fef791, org.springframework.security.web.access.intercept.AuthorizationFilter@5119415f]
+2026-04-25 17:29:25.600 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-25 17:29:27.653 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-25 17:29:27.848 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-25 17:29:27.864 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-04-25 17:29:28.091 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-25 17:29:28.091 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-25 17:29:28.093 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-04-25 17:29:29.193 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-25 17:29:29.195 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-25 17:29:29.433 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#2cf81141:0/SimpleConnection@49507443 [delegate=amqp://rabbitmq@106.54.15.105:5672/, localPort=52446]
+2026-04-25 17:29:30.649 [main] INFO  com.ticketing.TicketingSystemApplication - Started TicketingSystemApplication in 22.962 seconds (process running for 24.945)
+2026-04-25 17:29:31.131 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-25 17:29:32.211 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-25 17:30:00.004 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 17:30:00.113 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 17:30:00.114 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 17:30:00.152 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 17:35:00.012 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 17:35:00.114 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 17:35:00.115 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 17:35:00.149 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 17:40:00.000 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 17:40:00.105 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 17:40:00.105 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 17:40:00.139 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 17:45:00.008 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 17:45:00.042 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 17:45:00.043 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 17:45:00.145 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 17:50:00.013 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 17:50:00.049 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 17:50:00.049 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 17:50:00.154 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 17:55:00.001 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 17:55:00.112 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 17:55:00.113 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 17:55:00.145 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 18:00:00.000 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 18:00:00.108 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 18:00:00.108 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 18:00:00.144 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 18:05:00.011 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 18:05:00.058 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 18:05:00.058 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 18:05:00.161 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 18:10:00.004 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 18:10:00.104 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 18:10:00.105 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 18:10:00.139 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 18:15:00.011 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 18:15:00.119 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 18:15:00.119 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 18:15:00.153 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 18:20:00.001 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 18:20:00.345 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 18:20:00.345 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 18:20:00.380 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 18:25:00.006 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 18:25:00.039 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 18:25:00.041 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 18:25:00.142 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 18:29:33.439 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-25 18:29:34.350 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-25 18:30:00.001 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 18:30:00.141 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 18:30:00.142 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 18:30:00.178 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 18:35:00.008 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 18:35:00.183 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 18:35:00.183 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 18:35:00.228 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 18:40:00.013 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 18:40:00.046 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 18:40:00.046 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 18:40:00.147 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 18:45:00.010 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 18:45:00.111 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 18:45:00.112 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 18:45:00.148 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 18:50:00.010 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 18:50:00.044 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 18:50:00.045 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 18:50:00.142 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 18:55:00.013 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 18:55:00.051 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 18:55:00.051 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 18:55:00.150 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 19:00:00.012 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 19:00:00.112 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 19:00:00.112 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 19:00:00.146 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 19:05:00.005 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 19:05:00.103 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 19:05:00.103 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 19:05:00.138 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 19:10:00.011 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 19:10:00.045 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 19:10:00.045 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 19:10:00.143 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 19:15:00.007 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 19:15:00.106 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 19:15:00.106 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 19:15:00.145 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 19:20:00.009 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 19:20:00.107 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 19:20:00.107 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 19:20:00.147 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 19:25:00.014 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 19:25:00.112 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 19:25:00.112 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 19:25:00.146 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 19:29:35.070 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-25 19:29:35.870 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-25 19:30:00.013 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 19:30:00.048 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 19:30:00.048 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 19:30:00.151 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 19:35:00.007 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 19:35:00.109 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 19:35:00.109 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 19:35:00.143 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 19:40:00.011 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 19:40:00.113 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 19:40:00.113 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 19:40:00.147 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 19:45:00.013 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 19:45:00.047 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 19:45:00.049 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 19:45:00.150 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 19:50:00.012 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 19:50:00.047 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 19:50:00.047 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 19:50:00.149 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 19:55:00.008 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 19:55:00.042 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 19:55:00.042 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 19:55:00.145 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 20:00:00.016 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 20:00:00.050 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 20:00:00.051 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 20:00:00.167 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 20:05:00.004 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 20:05:00.038 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 20:05:00.039 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 20:05:00.139 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 20:10:00.001 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 20:10:00.036 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 20:10:00.036 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 20:10:00.136 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 20:15:00.007 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 20:15:00.055 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 20:15:00.055 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 20:15:00.155 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 20:20:00.015 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 20:20:00.115 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 20:20:00.115 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 20:20:00.150 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 20:25:00.002 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 20:25:00.157 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 20:25:00.157 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 20:25:00.191 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 20:29:33.099 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-25 20:29:33.962 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-25 20:30:00.007 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 20:30:00.041 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 20:30:00.041 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 20:30:00.139 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 20:35:00.007 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 20:35:00.103 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 20:35:00.105 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 20:35:00.138 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 20:40:03.779 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 20:40:03.846 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 20:40:03.846 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 20:40:03.944 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 20:45:00.009 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 20:45:00.107 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 20:45:00.107 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 20:45:00.147 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 20:50:00.014 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 20:50:00.111 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 20:50:00.111 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 20:50:00.147 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 20:55:00.009 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 20:55:00.043 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 20:55:00.044 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 20:55:00.140 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 21:00:00.009 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 21:00:00.111 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 21:00:00.111 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 21:00:00.145 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 21:05:00.005 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 21:05:00.039 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 21:05:00.039 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 21:05:00.157 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 21:10:00.000 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 21:10:00.101 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 21:10:00.101 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 21:10:00.138 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 21:15:00.002 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 21:15:00.036 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 21:15:00.036 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 21:15:00.136 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 21:20:00.010 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 21:20:00.138 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 21:20:00.138 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 21:20:00.171 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 21:25:00.009 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 21:25:00.109 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 21:25:00.111 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 21:25:00.143 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 21:29:36.868 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-25 21:29:38.215 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-25 21:30:00.003 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 21:30:00.109 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 21:30:00.109 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 21:30:00.143 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 21:35:00.001 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 21:35:00.035 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 21:35:00.035 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 21:35:00.138 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 21:40:00.016 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 21:40:00.119 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 21:40:00.120 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 21:40:00.153 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 21:45:00.009 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 21:45:00.114 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 21:45:00.115 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 21:45:00.149 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 21:50:00.001 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 21:50:00.106 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 21:50:00.106 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 21:50:00.140 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 21:55:00.008 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 21:55:00.105 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 21:55:00.105 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 21:55:00.139 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 22:00:00.005 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 22:00:00.039 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 22:00:00.039 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 22:00:00.149 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 22:05:00.009 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 22:05:00.072 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 22:05:00.072 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 22:05:00.186 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 22:10:00.002 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 22:10:00.105 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 22:10:00.105 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 22:10:00.139 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 22:15:00.005 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 22:15:00.185 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 22:15:00.185 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 22:15:00.218 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 22:20:00.012 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 22:20:00.132 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 22:20:00.132 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 22:20:00.166 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 22:25:00.002 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 22:25:00.106 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 22:25:00.106 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 22:25:00.140 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 22:29:37.339 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-25 22:29:38.314 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-25 22:30:00.005 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 22:30:00.106 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 22:30:00.106 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 22:30:00.139 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 22:35:00.006 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 22:35:00.116 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 22:35:00.116 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 22:35:00.149 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 22:40:00.012 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 22:40:00.047 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 22:40:00.047 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 22:40:00.149 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 22:45:00.009 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 22:45:00.044 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 22:45:00.044 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 22:45:00.157 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 22:50:00.001 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 22:50:00.102 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 22:50:00.102 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 22:50:00.136 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 22:55:00.012 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 22:55:00.139 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 22:55:00.139 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 22:55:00.172 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 23:00:00.000 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 23:00:00.101 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 23:00:00.101 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 23:00:00.134 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 23:05:00.011 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 23:05:00.045 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 23:05:00.045 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 23:05:00.153 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 23:10:00.002 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 23:10:00.037 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 23:10:00.038 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 23:10:00.173 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 23:15:00.005 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 23:15:00.105 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 23:15:00.106 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 23:15:00.140 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 23:20:00.005 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 23:20:00.056 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 23:20:00.057 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 23:20:00.155 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 23:25:00.008 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 23:25:00.041 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 23:25:00.042 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 23:25:00.153 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 23:29:37.004 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-25 23:29:37.718 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-25 23:30:00.009 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 23:30:00.043 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 23:30:00.043 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 23:30:00.145 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 23:35:00.014 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 23:35:00.114 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 23:35:00.114 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 23:35:00.147 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 23:40:00.010 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 23:40:00.113 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 23:40:00.114 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 23:40:00.148 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 23:45:00.015 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 23:45:00.049 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 23:45:00.049 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 23:45:00.152 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 23:50:00.001 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 23:50:00.037 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-25 23:50:00.037 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 23:50:00.135 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 23:55:00.014 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-25 23:55:00.116 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-25 23:55:00.116 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-25 23:55:00.151 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成

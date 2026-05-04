@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ticketing.dao.UserDao">
+    <select id="selectByPhone" resultType="com.ticketing.entity.User">
+        SELECT * FROM user WHERE phone = #{phone}
+    </select>
+    <select id="selectByEmail" resultType="com.ticketing.entity.User">
+        SELECT * FROM user WHERE email = #{email}
+    </select>
+</mapper>

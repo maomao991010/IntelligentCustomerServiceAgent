@@ -1,0 +1,718 @@
+2026-04-27 00:00:00.000 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 00:00:00.040 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 00:00:00.040 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 00:00:00.142 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 00:05:00.007 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 00:05:00.132 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 00:05:00.133 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 00:05:00.167 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 00:10:00.013 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 00:10:00.149 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 00:10:00.149 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 00:10:00.186 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 11:26:49.518 [lettuce-nioEventLoop-4-3] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-04-27 11:26:49.687 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-63] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@2cf0528f: tags=[[amq.ctag-JbXi3yb_cS8mVdiQgCv2vA]], channel=Cached Rabbit Channel: AMQChannel(amqp://rabbitmq@106.54.15.105:5672/,1), conn: Proxy@7d8a858 Shared Rabbit Connection: SimpleConnection@2b2e9384 [delegate=amqp://rabbitmq@106.54.15.105:5672/, localPort=64085], acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:26:49.709 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-64] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:26:49.714 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-64] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:26:49.765 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-68] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@7d83a27b: tags=[[amq.ctag-2arhr1BGBZ0qe7Rzei13Xg]], channel=Cached Rabbit Channel: AMQChannel(amqp://rabbitmq@106.54.15.105:5672/,4), conn: Proxy@7d8a858 Shared Rabbit Connection: null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:26:49.765 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-70] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@79f9ba0d: tags=[[amq.ctag-lzgp8ok0IsCr9nITbkuLCw]], channel=Cached Rabbit Channel: AMQChannel(amqp://rabbitmq@106.54.15.105:5672/,2), conn: Proxy@7d8a858 Shared Rabbit Connection: null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:26:49.767 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-69] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:26:49.768 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-71] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:26:49.893 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-69] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:26:49.895 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-71] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:26:50.104 [lettuce-eventExecutorLoop-1-5] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /106.54.15.105:6379
+2026-04-27 11:26:50.409 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-71] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@6659b9f7: tags=[[amq.ctag-OjjtehE2lQgfcnnAJFqgnw]], channel=Cached Rabbit Channel: AMQChannel(amqp://rabbitmq@106.54.15.105:5672/,3), conn: Proxy@7d8a858 Shared Rabbit Connection: null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:26:50.445 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-72] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:26:54.872 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-64] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@782b5cec: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:26:55.087 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-71] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@302954e4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:26:55.086 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-69] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@45bb1038: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:27:00.446 [lettuce-eventExecutorLoop-1-9] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:27:10.548 [lettuce-eventExecutorLoop-1-10] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:27:11.492 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-72] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:27:20.635 [lettuce-eventExecutorLoop-1-11] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:27:30.839 [lettuce-eventExecutorLoop-1-12] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:27:32.530 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-65] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:27:37.678 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-72] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@3461d15: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:27:41.141 [lettuce-eventExecutorLoop-1-13] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:27:51.738 [lettuce-eventExecutorLoop-1-18] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:27:53.573 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-72] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:28:02.862 [lettuce-eventExecutorLoop-1-20] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:28:14.599 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-72] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:28:14.937 [lettuce-eventExecutorLoop-1-22] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:28:29.146 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:28:35.633 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-70] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:28:40.721 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-72] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@43cf842a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:28:47.443 [lettuce-eventExecutorLoop-1-3] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:28:56.678 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-73] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:29:13.947 [lettuce-eventExecutorLoop-1-6] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:29:17.732 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-65] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:29:38.748 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-73] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:29:43.858 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-65] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@15e48a8f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:29:54.044 [lettuce-eventExecutorLoop-1-10] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:29:59.802 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-73] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:30:20.876 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-70] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:30:25.960 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-73] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@6640619f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:30:34.145 [lettuce-eventExecutorLoop-1-12] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:30:41.930 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-73] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:30:47.039 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-70] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@6a20da26: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:30:55.450 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 11:31:02.974 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-66] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:31:08.058 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-73] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@6e17290a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:31:14.236 [lettuce-eventExecutorLoop-1-14] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:31:24.031 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-74] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:31:25.453 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 11:31:45.071 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-71] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:31:54.341 [lettuce-eventExecutorLoop-1-16] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:32:06.141 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-71] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:32:25.464 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 11:32:27.176 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-74] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:32:32.312 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-71] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@fb9b81c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:32:34.442 [lettuce-eventExecutorLoop-1-18] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:32:48.224 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-74] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:32:50.214 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 0
+2026-04-27 11:33:09.254 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-66] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:33:14.378 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-74] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@24078c8c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:33:14.548 [lettuce-eventExecutorLoop-1-20] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:33:30.296 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-74] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:33:34.351 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 尝试重新连接AI模型...
+2026-04-27 11:33:34.351 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-27 11:33:34.469 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-27 11:33:34.469 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型重新连接成功
+2026-04-27 11:33:34.469 [scheduling-1] INFO  com.ticketing.agent.health.ServiceHealthManager - AI模型重连成功
+2026-04-27 11:33:35.434 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-66] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@4e880341: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:33:51.335 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-72] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:33:54.647 [lettuce-eventExecutorLoop-1-22] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:33:56.450 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-74] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@702d1f96: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:34:12.379 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-72] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:34:33.433 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-75] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:34:34.748 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:34:38.547 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-72] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@28aeb0f0: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:34:54.473 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-67] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:35:14.848 [lettuce-eventExecutorLoop-1-2] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:35:15.501 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-67] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:35:17.140 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 0
+2026-04-27 11:35:36.544 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-75] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:35:41.660 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-67] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@60bfd6bf: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:35:54.942 [lettuce-eventExecutorLoop-1-4] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:35:57.593 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-73] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:36:18.663 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-75] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:36:35.034 [lettuce-eventExecutorLoop-1-6] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:36:39.707 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-68] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:36:42.951 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 尝试重新连接AI模型...
+2026-04-27 11:36:42.951 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-27 11:36:43.148 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-27 11:36:43.148 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型重新连接成功
+2026-04-27 11:36:43.149 [scheduling-1] INFO  com.ticketing.agent.health.ServiceHealthManager - AI模型重连成功
+2026-04-27 11:36:44.852 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-75] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@735a7b3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:37:00.769 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-75] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:37:15.141 [lettuce-eventExecutorLoop-1-8] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:37:21.824 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-73] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:37:26.901 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-75] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@1fda64da: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:37:42.881 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-76] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:37:47.958 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-73] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@4efac433: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:37:55.241 [lettuce-eventExecutorLoop-1-10] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:38:03.931 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-68] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:38:25.005 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-76] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:38:25.851 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 0
+2026-04-27 11:38:30.087 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-68] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@5788331a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:38:35.335 [lettuce-eventExecutorLoop-1-12] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:38:46.033 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-74] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:39:07.069 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-76] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:39:15.447 [lettuce-eventExecutorLoop-1-14] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:39:28.116 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-69] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:39:33.219 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-76] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@74c13aa5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:39:49.158 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-76] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:39:55.549 [lettuce-eventExecutorLoop-1-16] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:40:10.194 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-74] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:40:15.306 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-76] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@49577ff6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:40:31.247 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-77] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:40:35.634 [lettuce-eventExecutorLoop-1-18] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:40:36.370 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-74] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@4ca813e6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:40:37.678 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 尝试重新连接AI模型...
+2026-04-27 11:40:37.679 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-27 11:40:37.816 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-27 11:40:37.816 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型重新连接成功
+2026-04-27 11:40:37.816 [scheduling-1] INFO  com.ticketing.agent.health.ServiceHealthManager - AI模型重连成功
+2026-04-27 11:40:52.306 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-69] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:41:13.346 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-77] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:41:15.743 [lettuce-eventExecutorLoop-1-20] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:41:18.453 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-69] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@6961ff8b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:41:34.392 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-75] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:41:55.451 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-75] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:41:55.838 [lettuce-eventExecutorLoop-1-22] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:42:16.498 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-77] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:42:20.457 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 0
+2026-04-27 11:42:21.599 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-75] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@37b00ecb: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:42:35.941 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:42:37.552 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-70] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:42:42.621 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-77] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@101b5c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:42:58.600 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-70] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:43:04.472 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 尝试重新连接AI模型...
+2026-04-27 11:43:04.472 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-27 11:43:04.587 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-27 11:43:04.587 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型重新连接成功
+2026-04-27 11:43:04.587 [scheduling-1] INFO  com.ticketing.agent.health.ServiceHealthManager - AI模型重连成功
+2026-04-27 11:43:16.042 [lettuce-eventExecutorLoop-1-2] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:43:19.658 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-77] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:43:24.757 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-70] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@5872d687: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:43:40.703 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-76] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:43:45.786 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-77] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@78ca6322: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:43:56.148 [lettuce-eventExecutorLoop-1-4] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:44:01.741 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-78] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:44:22.789 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-78] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:44:36.243 [lettuce-eventExecutorLoop-1-6] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:44:43.854 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-71] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:44:47.316 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 0
+2026-04-27 11:44:48.922 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-78] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@58e1457a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:45:04.898 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-78] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:45:16.343 [lettuce-eventExecutorLoop-1-8] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:45:25.931 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-78] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:45:45.871 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 尝试重新连接AI模型...
+2026-04-27 11:45:45.871 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-27 11:45:46.029 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-27 11:45:46.029 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型重新连接成功
+2026-04-27 11:45:46.029 [scheduling-1] INFO  com.ticketing.agent.health.ServiceHealthManager - AI模型重连成功
+2026-04-27 11:45:46.967 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-76] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:45:52.081 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-78] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@4141ccbf: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:45:56.445 [lettuce-eventExecutorLoop-1-10] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:46:08.014 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-79] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:46:13.137 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-76] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@79af8c68: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:46:29.056 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-79] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:46:36.544 [lettuce-eventExecutorLoop-1-12] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:46:50.092 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-71] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:46:55.206 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-79] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@2c87fc26: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:47:11.138 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-79] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:47:16.247 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-71] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@4a82c9ec: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:47:16.637 [lettuce-eventExecutorLoop-1-14] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:47:28.730 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 0
+2026-04-27 11:47:32.179 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-77] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:47:53.254 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-77] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:47:56.734 [lettuce-eventExecutorLoop-1-16] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:48:13.508 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 尝试重新连接AI模型...
+2026-04-27 11:48:13.508 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-27 11:48:13.618 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-27 11:48:13.618 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型重新连接成功
+2026-04-27 11:48:13.618 [scheduling-1] INFO  com.ticketing.agent.health.ServiceHealthManager - AI模型重连成功
+2026-04-27 11:48:14.311 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-80] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:48:19.410 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-77] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@63b94186: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:48:35.373 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-72] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:48:36.838 [lettuce-eventExecutorLoop-1-18] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:48:56.422 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-79] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:49:16.934 [lettuce-eventExecutorLoop-1-20] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:49:17.486 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-78] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:49:22.577 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-79] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@58d6b6f1: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:49:38.549 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-78] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:49:56.361 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 0
+2026-04-27 11:49:57.048 [lettuce-eventExecutorLoop-1-22] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:49:59.589 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-80] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:50:00.978 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 尝试重新连接AI模型...
+2026-04-27 11:50:00.978 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-27 11:50:01.063 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-27 11:50:01.063 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型重新连接成功
+2026-04-27 11:50:01.063 [scheduling-1] INFO  com.ticketing.agent.health.ServiceHealthManager - AI模型重连成功
+2026-04-27 11:50:04.683 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-78] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@2f060f3e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:50:20.638 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-72] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:50:25.761 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-80] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@1a7638a6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:50:37.148 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:50:41.686 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-80] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:50:46.802 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-72] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@6251891d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:51:02.728 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-79] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:51:17.238 [lettuce-eventExecutorLoop-1-2] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:51:23.742 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-79] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:51:43.772 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 0
+2026-04-27 11:51:44.783 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-81] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:51:49.870 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-79] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@75c16b69: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:51:57.352 [lettuce-eventExecutorLoop-1-4] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:52:05.831 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-81] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:52:26.886 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-73] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:52:32.047 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-81] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@49cbad05: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:52:37.446 [lettuce-eventExecutorLoop-1-6] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:52:43.520 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 尝试重新连接AI模型...
+2026-04-27 11:52:43.520 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-27 11:52:43.601 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-27 11:52:43.601 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型重新连接成功
+2026-04-27 11:52:43.601 [scheduling-1] INFO  com.ticketing.agent.health.ServiceHealthManager - AI模型重连成功
+2026-04-27 11:52:47.946 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-80] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:53:08.975 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-80] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:53:14.136 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-80] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@61211065: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:53:17.546 [lettuce-eventExecutorLoop-1-8] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:53:30.014 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-82] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:53:51.072 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-73] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:53:57.640 [lettuce-eventExecutorLoop-1-10] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:54:12.098 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-81] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:54:17.218 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-73] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@5edac2e4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:54:26.357 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 0
+2026-04-27 11:54:33.155 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-80] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:54:37.736 [lettuce-eventExecutorLoop-1-12] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:54:54.194 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-82] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:54:59.319 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-80] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@28465aab: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:55:10.899 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 尝试重新连接AI模型...
+2026-04-27 11:55:10.899 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-27 11:55:11.073 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-27 11:55:11.073 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型重新连接成功
+2026-04-27 11:55:11.073 [scheduling-1] INFO  com.ticketing.agent.health.ServiceHealthManager - AI模型重连成功
+2026-04-27 11:55:15.242 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-74] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:55:17.838 [lettuce-eventExecutorLoop-1-14] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:55:20.366 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-82] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@c1b40b8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:55:36.297 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-81] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:55:57.336 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-81] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:55:57.945 [lettuce-eventExecutorLoop-1-16] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:56:02.449 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-81] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@7bb57af8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:56:18.392 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-81] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:56:38.037 [lettuce-eventExecutorLoop-1-18] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:56:39.426 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-83] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:56:44.541 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-81] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@377150dc: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:56:53.857 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 0
+2026-04-27 11:57:00.465 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-74] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:57:18.136 [lettuce-eventExecutorLoop-1-20] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:57:21.504 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-82] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:57:26.569 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-74] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@4aed3403: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:57:42.551 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-82] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:57:58.244 [lettuce-eventExecutorLoop-1-22] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:58:03.600 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-82] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:58:08.701 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-82] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@7a5211b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:58:19.754 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 尝试重新连接AI模型...
+2026-04-27 11:58:19.754 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-27 11:58:19.837 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-27 11:58:19.837 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型重新连接成功
+2026-04-27 11:58:19.837 [scheduling-1] INFO  com.ticketing.agent.health.ServiceHealthManager - AI模型重连成功
+2026-04-27 11:58:24.636 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-82] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:58:38.341 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:58:45.673 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-83] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:58:50.818 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-82] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@7fc7c459: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:59:06.752 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-75] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:59:11.837 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-83] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@4117788c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 11:59:18.446 [lettuce-eventExecutorLoop-1-2] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 11:59:27.794 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-83] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:59:48.836 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-83] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 11:59:58.536 [lettuce-eventExecutorLoop-1-4] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 12:00:02.567 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 0
+2026-04-27 12:00:09.892 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-83] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:00:14.983 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-83] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@7a413d41: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 12:00:30.922 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-84] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:00:38.636 [lettuce-eventExecutorLoop-1-6] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 12:00:46.298 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 尝试重新连接AI模型...
+2026-04-27 12:00:46.298 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-27 12:00:46.400 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-27 12:00:46.400 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型重新连接成功
+2026-04-27 12:00:46.400 [scheduling-1] INFO  com.ticketing.agent.health.ServiceHealthManager - AI模型重连成功
+2026-04-27 12:00:51.975 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-75] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:01:13.010 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-84] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:01:18.023 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-75] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@92664e3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 12:01:18.741 [lettuce-eventExecutorLoop-1-8] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 12:01:34.057 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-84] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:01:55.096 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-83] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:01:58.837 [lettuce-eventExecutorLoop-1-10] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 12:02:00.239 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-84] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@58d68b05: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 12:02:16.132 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-84] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:02:21.260 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-83] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@7d18359d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 12:02:29.103 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 0
+2026-04-27 12:02:37.193 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-76] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:02:38.946 [lettuce-eventExecutorLoop-1-12] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 12:02:42.299 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-84] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@2e7e3d99: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 12:02:58.214 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-85] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:03:19.041 [lettuce-eventExecutorLoop-1-14] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 12:03:19.244 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-85] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:03:40.306 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-84] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:03:45.426 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-85] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@33614f2d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 12:03:54.711 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 尝试重新连接AI模型...
+2026-04-27 12:03:54.711 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-27 12:03:54.799 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-27 12:03:54.799 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型重新连接成功
+2026-04-27 12:03:54.799 [scheduling-1] INFO  com.ticketing.agent.health.ServiceHealthManager - AI模型重连成功
+2026-04-27 12:03:59.139 [lettuce-eventExecutorLoop-1-16] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 12:04:01.355 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-85] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:04:22.391 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-76] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:04:39.238 [lettuce-eventExecutorLoop-1-18] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 12:04:43.443 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-86] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:04:48.523 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-76] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@e617930: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 12:05:04.497 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-86] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:05:16.016 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 12:05:19.346 [lettuce-eventExecutorLoop-1-20] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 12:05:25.543 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-84] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:05:30.659 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-86] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@1342e850: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 12:05:46.018 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 12:05:46.597 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-85] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:05:51.711 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-84] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@71663ea3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 12:05:59.437 [lettuce-eventExecutorLoop-1-22] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 12:06:07.631 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-77] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:06:12.783 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-85] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@12c82068: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 12:06:28.673 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-77] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:06:39.549 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 12:06:46.029 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 12:06:49.716 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-87] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:06:54.895 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-77] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@1ee3eaa: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 12:07:10.750 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-85] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:07:19.649 [lettuce-eventExecutorLoop-1-2] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 12:07:31.801 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-86] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:07:52.841 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-86] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:07:59.743 [lettuce-eventExecutorLoop-1-4] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 12:08:13.885 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-78] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:08:19.000 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-86] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@53765d9b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 12:08:34.929 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-87] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 12:08:39.849 [lettuce-eventExecutorLoop-1-6] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 18:05:05.662 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-85] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:05:05.664 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-87] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:05:05.664 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-78] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:05:05.665 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-87] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:05:06.006 [lettuce-eventExecutorLoop-1-8] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 18:05:10.815 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-87] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@8041744: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 18:05:10.834 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-88] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:05:10.861 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-85] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@712c801: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 18:05:10.861 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-87] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@77ef25fe: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 18:05:10.861 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-78] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@925b1ff: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 18:05:31.888 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-86] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:05:36.064 [lettuce-eventExecutorLoop-1-10] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 18:05:52.945 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-86] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:06:12.366 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 18:06:13.987 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-79] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:06:16.170 [lettuce-eventExecutorLoop-1-12] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 18:06:19.109 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-86] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@198e9cea: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 18:06:35.027 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-79] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:06:56.063 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-88] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:06:56.266 [lettuce-eventExecutorLoop-1-14] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 18:07:01.152 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-79] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@4440cd29: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 18:07:12.377 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 18:07:12.377 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 18:07:17.084 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-88] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:07:36.361 [lettuce-eventExecutorLoop-1-16] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 18:07:38.119 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-87] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:07:43.209 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-88] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@23188f30: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 18:07:59.162 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-80] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:08:05.661 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 0
+2026-04-27 18:08:16.464 [lettuce-eventExecutorLoop-1-18] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 18:08:20.230 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-88] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:08:41.280 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-89] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:08:46.384 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-88] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@55878bff: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 18:08:56.576 [lettuce-eventExecutorLoop-1-20] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 18:09:02.312 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-89] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:09:23.381 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-87] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:09:28.488 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-89] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@7b4b6374: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 18:09:32.312 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 尝试重新连接AI模型...
+2026-04-27 18:09:32.312 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-27 18:09:32.435 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-27 18:09:32.435 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型重新连接成功
+2026-04-27 18:09:32.435 [scheduling-1] INFO  com.ticketing.agent.health.ServiceHealthManager - AI模型重连成功
+2026-04-27 18:09:36.673 [lettuce-eventExecutorLoop-1-22] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 18:09:44.430 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-80] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-27 18:09:49.581 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-87] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@50880cca: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2026-04-27 18:09:51.592 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-80] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#2cf81141:675/SimpleConnection@1e8f2c52 [delegate=amqp://rabbitmq@106.54.15.105:5672/, localPort=52489]
+2026-04-27 18:10:16.770 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.54.15.105/<unresolved>:6379
+2026-04-27 18:10:16.877 [lettuce-nioEventLoop-4-14] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 106.54.15.105/<unresolved>:6379
+2026-04-27 18:10:17.467 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-27 18:10:18.586 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-27 18:10:19.206 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-27 18:10:19.848 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-27 18:10:20.494 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-27 18:10:21.209 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-27 18:10:21.846 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-27 18:10:22.758 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-27 18:10:23.407 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-27 18:10:24.242 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-27 18:10:24.492 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 18:10:24.589 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 18:10:24.589 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 18:10:24.622 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 18:15:00.012 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 18:15:00.109 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 18:15:00.109 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 18:15:00.144 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 18:20:00.010 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 18:20:00.044 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 18:20:00.044 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 18:20:00.140 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 18:25:00.007 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 18:25:00.042 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 18:25:00.042 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 18:25:00.139 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 18:29:40.107 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-27 18:29:40.972 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-27 18:30:00.014 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 18:30:00.111 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 18:30:00.111 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 18:30:00.145 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 18:35:00.008 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 18:35:00.042 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 18:35:00.042 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 18:35:00.138 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 18:40:00.002 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 18:40:00.105 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 18:40:00.105 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 18:40:00.139 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 18:45:00.008 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 18:45:00.121 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 18:45:00.121 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 18:45:00.155 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 18:50:00.006 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 18:50:00.109 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 18:50:00.109 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 18:50:00.144 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 18:55:00.011 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 18:55:00.047 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 18:55:00.047 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 18:55:00.150 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 19:00:00.008 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 19:00:00.111 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 19:00:00.111 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 19:00:00.145 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 19:05:00.008 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 19:05:00.044 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 19:05:00.044 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 19:05:00.145 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 19:10:00.012 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 19:10:00.046 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 19:10:00.046 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 19:10:00.147 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 19:15:00.010 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 19:15:00.045 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 19:15:00.045 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 19:15:00.145 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 19:20:00.004 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 19:20:00.042 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 19:20:00.042 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 19:20:00.167 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 19:25:00.012 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 19:25:00.061 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 19:25:00.061 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 19:25:00.162 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 19:29:40.147 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-27 19:29:40.894 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-27 19:30:00.006 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 19:30:00.041 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 19:30:00.041 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 19:30:00.140 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 19:35:00.008 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 19:35:00.043 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 19:35:00.043 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 19:35:00.154 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 19:40:00.002 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 19:40:00.036 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 19:40:00.036 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 19:40:00.138 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 19:45:00.016 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 19:45:00.050 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 19:45:00.051 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 19:45:00.151 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 19:50:00.003 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 19:50:00.048 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 19:50:00.050 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 19:50:00.150 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 19:55:00.012 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 19:55:00.046 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 19:55:00.046 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 19:55:00.148 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 20:00:00.001 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 20:00:00.109 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 20:00:00.110 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 20:00:00.144 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 20:05:00.013 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 20:05:00.116 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 20:05:00.116 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 20:05:00.150 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 20:10:00.006 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 20:10:00.108 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 20:10:00.108 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 20:10:00.143 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 20:15:00.002 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 20:15:00.047 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 20:15:00.048 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 20:15:00.149 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 20:20:00.007 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 20:20:00.041 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 20:20:00.042 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 20:20:00.145 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 20:25:00.010 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 20:25:00.044 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 20:25:00.044 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 20:25:00.182 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 20:29:42.084 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-27 20:29:42.918 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-27 20:30:00.007 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 20:30:00.042 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 20:30:00.042 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 20:30:00.143 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 20:35:00.014 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 20:35:00.117 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 20:35:00.117 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 20:35:00.151 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 20:40:00.012 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 20:40:00.127 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 20:40:00.127 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 20:40:00.162 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 20:45:00.006 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 20:45:00.040 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 20:45:00.040 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 20:45:00.141 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 20:50:00.011 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 20:50:00.112 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 20:50:00.112 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 20:50:00.147 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 20:55:00.005 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 20:55:00.106 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 20:55:00.106 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 20:55:00.141 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 21:00:00.011 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 21:00:00.046 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 21:00:00.047 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 21:00:00.177 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 21:05:00.014 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 21:05:00.049 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 21:05:00.049 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 21:05:00.150 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 21:10:00.010 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 21:10:00.044 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 21:10:00.046 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 21:10:00.149 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 21:15:00.008 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 21:15:00.112 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 21:15:00.112 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 21:15:00.145 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 21:20:00.009 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 21:20:00.044 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 21:20:00.044 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 21:20:00.149 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 21:25:00.000 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 21:25:00.034 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 21:25:00.034 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 21:25:00.140 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 21:29:40.087 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-27 21:29:40.687 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-27 21:30:00.006 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 21:30:00.141 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 21:30:00.141 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 21:30:00.176 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 21:35:00.008 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 21:35:00.110 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 21:35:00.110 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 21:35:00.148 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 21:40:00.003 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 21:40:00.038 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 21:40:00.038 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 21:40:00.139 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 21:45:00.013 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 21:45:00.116 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 21:45:00.116 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 21:45:00.150 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 21:50:00.009 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 21:50:00.111 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 21:50:00.111 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 21:50:00.145 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 21:55:00.011 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 21:55:00.115 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 21:55:00.115 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 21:55:00.149 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 22:00:00.009 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 22:00:00.113 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 22:00:00.113 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 22:00:00.147 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 22:05:00.004 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 22:05:00.038 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 22:05:00.038 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 22:05:00.141 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 22:10:00.002 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 22:10:00.106 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 22:10:00.106 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 22:10:00.140 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 22:15:00.016 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 22:15:00.050 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 22:15:00.050 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 22:15:00.149 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 22:20:00.007 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 22:20:00.044 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 22:20:00.044 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 22:20:00.143 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 22:25:00.012 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 22:25:00.047 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 22:25:00.047 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 22:25:00.146 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 22:29:40.467 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-27 22:29:41.466 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-27 22:30:00.002 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 22:30:00.036 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 22:30:00.036 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 22:30:00.135 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 22:35:00.009 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 22:35:00.111 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 22:35:00.111 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 22:35:00.145 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 22:40:00.015 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 22:40:00.137 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 22:40:00.137 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 22:40:00.171 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 22:45:00.011 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 22:45:00.046 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 22:45:00.046 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 22:45:00.196 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 22:50:00.003 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 22:50:00.039 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 22:50:00.039 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 22:50:00.144 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 22:55:00.011 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 22:55:00.045 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 22:55:00.046 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 22:55:00.157 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 23:00:00.011 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 23:00:00.114 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 23:00:00.114 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 23:00:00.148 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 23:05:00.003 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 23:05:00.039 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 23:05:00.039 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 23:05:00.184 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 23:10:00.000 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 23:10:00.035 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 23:10:00.035 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 23:10:00.134 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 23:15:00.014 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 23:15:00.112 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 23:15:00.112 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 23:15:00.146 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 23:20:00.004 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 23:20:00.106 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 23:20:00.107 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 23:20:00.144 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 23:25:00.008 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 23:25:00.105 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 23:25:00.106 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 23:25:00.140 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 23:29:40.739 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-27 23:29:41.725 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-27 23:30:00.001 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 23:30:00.100 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 23:30:00.100 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 23:30:00.134 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 23:35:00.005 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 23:35:00.117 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 23:35:00.117 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 23:35:00.152 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 23:40:00.012 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 23:40:00.113 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 23:40:00.113 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 23:40:00.147 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 23:45:00.015 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 23:45:00.058 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 23:45:00.058 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 23:45:00.159 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 23:50:00.000 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 23:50:00.036 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 23:50:00.036 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 23:50:00.140 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-27 23:55:00.010 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-27 23:55:00.074 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-27 23:55:00.075 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-27 23:55:00.174 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成

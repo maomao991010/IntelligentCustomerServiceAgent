@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理 - 用户角色分配</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .admin-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+
+        .page-header-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #7c3aed 100%);
+            padding: 36px 40px;
+            border-radius: var(--border-radius-lg);
+            margin-bottom: 32px;
+            box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.4);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .page-header-section h1 {
+            margin: 0;
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header-section h1::before {
+            content: '👤';
+            font-size: 36px;
+        }
+
+        .btn-back {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-back:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .list-section {
+            background: var(--white);
+            padding: 0;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-header {
+            padding: 24px 32px;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title::before {
+            content: '📋';
+        }
+
+        .search-section {
+            display: flex;
+            gap: 12px;
+            padding: 20px 32px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background: var(--bg-secondary);
+            box-sizing: border-box;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+        }
+
+        .btn-search {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #7c3aed 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: var(--border-radius-sm);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-search:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+        }
+
+        .user-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 16px;
+            padding: 24px 32px;
+        }
+
+        .user-card {
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-light);
+        }
+
+        .user-card:hover {
+            border-color: var(--primary-color);
+            background: var(--white);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+        }
+
+        .user-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .user-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 6px;
+        }
+
+        .user-phone {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .btn-assign {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #7c3aed 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius-sm);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .btn-assign:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            padding: 0;
+            max-width: 560px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-xl);
+            animation: scaleIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 32px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-muted);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--bg-secondary);
+            color: var(--text-color);
+        }
+
+        .modal-body {
+            padding: 24px 32px;
+        }
+
+        .role-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius-sm);
+            margin-bottom: 10px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: 1px solid var(--border-light);
+        }
+
+        .role-item:hover {
+            border-color: var(--primary-color);
+            background: var(--white);
+        }
+
+        .role-item input {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .role-name {
+            font-weight: 600;
+            color: var(--text-color);
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .role-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .modal-footer {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+            padding: 20px 32px;
+            border-top: 1px solid var(--border-light);
+            background: var(--bg-secondary);
+        }
+
+        .btn-cancel {
+            padding: 10px 24px;
+            border: 2px solid var(--border-color);
+            background: var(--white);
+            color: var(--text-secondary);
+            border-radius: var(--border-radius-sm);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .btn-cancel:hover {
+            background: var(--bg-secondary);
+        }
+
+        .btn-save {
+            padding: 10px 24px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #7c3aed 100%);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius-sm);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .btn-save:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--text-secondary);
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .admin-container {
+                padding: 16px;
+            }
+
+            .page-header-section {
+                padding: 24px;
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+
+            .search-section {
+                padding: 16px;
+                flex-direction: column;
+            }
+
+            .user-list {
+                padding: 16px;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">🎫 后台管理</div>
+                <div class="nav-links">
+                    <a href="admin-home.html" class="nav-link">演唱会管理</a>
+                    <a href="admin.html" class="nav-link">添加/编辑演唱会</a>
+                    <a href="faq-admin.html" class="nav-link">FAQ 管理</a>
+                    <a href="token-usage.html" class="nav-link">Token 用量</a>
+                    <a href="role-manage.html" class="nav-link">角色管理</a>
+                    <a href="permission-manage.html" class="nav-link">权限管理</a>
+                    <a href="user-role-assign.html" class="nav-link active">用户角色</a>
+                    <a href="role-permission-assign.html" class="nav-link">角色权限</a>
+                    <a href="user-info.html" class="nav-link">👤 个人信息</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="admin-container">
+                <div class="page-header-section">
+                    <h1>用户角色分配</h1>
+                    <button class="btn-back" onclick="window.location.href='role-manage.html'">← 返回角色管理</button>
+                </div>
+
+                <div class="list-section">
+                    <div class="section-header">
+                        <div class="section-title">用户列表</div>
+                    </div>
+                    <div class="search-section">
+                        <input type="text" class="search-input" id="searchInput" placeholder="搜索用户（手机号/邮箱/昵称）">
+                        <button class="btn-search" onclick="searchUsers()">搜索</button>
+                    </div>
+                    <div class="user-list" id="userList"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="roleModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">分配角色</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="roleList"></div>
+            <div class="modal-footer">
+                <button class="btn-cancel" onclick="closeModal()">取消</button>
+                <button class="btn-save" onclick="saveUserRoles()">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let users = [];
+        let allRoles = [];
+        let currentUserId = null;
+        let selectedRoleIds = new Set();
+
+        function getAuthHeaders() {
+            const token = localStorage.getItem('token');
+            const headers = {
+                'Content-Type': 'application/json'
+            };
+            if (token) {
+                headers['Authorization'] = 'Bearer ' + token;
+            }
+            return headers;
+        }
+
+        async function init() {
+            await loadUsers();
+            await loadRoles();
+            renderUsers();
+        }
+
+        async function loadUsers() {
+            try {
+                const res = await fetch('/api/v1/users', {
+                    method: 'GET',
+                    headers: getAuthHeaders()
+                });
+                const data = await res.json();
+                if (data.code === 200) {
+                    users = data.data || [];
+                }
+            } catch (e) {
+                console.error(e);
+                users = [];
+            }
+        }
+
+        async function loadRoles() {
+            try {
+                const res = await fetch('/api/v1/admin/role/list', {
+                    method: 'GET',
+                    headers: getAuthHeaders()
+                });
+                const data = await res.json();
+                if (data.code === 200) {
+                    allRoles = data.data;
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        function renderUsers() {
+            const container = document.getElementById('userList');
+            const keyword = document.getElementById('searchInput').value.toLowerCase().trim();
+            container.innerHTML = '';
+
+            let filteredUsers = users;
+            if (keyword) {
+                filteredUsers = users.filter(user =>
+                    (user.nickname || '').toLowerCase().includes(keyword) ||
+                    (user.phone || '').toLowerCase().includes(keyword) ||
+                    (user.email || '').toLowerCase().includes(keyword)
+                );
+            }
+
+            if (!filteredUsers || filteredUsers.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state" style="grid-column: 1 / -1;">
+                        <div class="empty-state-icon">📭</div>
+                        <p>${keyword ? '没有找到匹配的用户' : '暂无用户数据'}</p>
+                    </div>
+                `;
+                return;
+            }
+            filteredUsers.forEach(user => {
+                const div = document.createElement('div');
+                div.className = 'user-card';
+                div.innerHTML = `
+                    <div class="user-info">
+                        <div class="user-name">${escapeHtml(user.nickname || '未设置昵称')}</div>
+                        <div class="user-phone">${user.phone ? '📱 ' + escapeHtml(user.phone) : '📧 ' + escapeHtml(user.email || '-')}</div>
+                    </div>
+                    <button class="btn-assign" onclick="openAssignModal(${user.id}, '${escapeHtml(user.nickname || '用户')}')">分配角色</button>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        async function openAssignModal(userId, userName) {
+            currentUserId = userId;
+            document.getElementById('modalTitle').textContent = `分配角色 - ${userName}`;
+            try {
+                const res = await fetch(`/api/v1/admin/role/user/${userId}`, {
+                    method: 'GET',
+                    headers: getAuthHeaders()
+                });
+                const data = await res.json();
+                if (data.code === 200) {
+                    selectedRoleIds = new Set(data.data.map(r => r.id));
+                }
+            } catch (e) {
+                selectedRoleIds = new Set();
+            }
+            renderRoleList();
+            document.getElementById('roleModal').classList.add('active');
+        }
+
+        function renderRoleList() {
+            const container = document.getElementById('roleList');
+            container.innerHTML = allRoles.map(role => `
+                <label class="role-item">
+                    <input type="checkbox" id="role_${role.id}" value="${role.id}"
+                        ${selectedRoleIds.has(role.id) ? 'checked' : ''}
+                        onchange="toggleRole(${role.id}, this.checked)">
+                    <div>
+                        <div class="role-name">${escapeHtml(role.roleName)}</div>
+                        <div class="role-desc">${escapeHtml(role.description || '无描述')}</div>
+                    </div>
+                </label>
+            `).join('');
+        }
+
+        function toggleRole(roleId, checked) {
+            if (checked) {
+                selectedRoleIds.add(roleId);
+            } else {
+                selectedRoleIds.delete(roleId);
+            }
+        }
+
+        async function saveUserRoles() {
+            try {
+                const res = await fetch('/api/v1/admin/user-role/assign', {
+                    method: 'POST',
+                    headers: getAuthHeaders(),
+                    body: JSON.stringify({
+                        userId: currentUserId,
+                        roleIds: Array.from(selectedRoleIds)
+                    })
+                });
+                const data = await res.json();
+                if (data.code === 200) {
+                    alert('角色分配成功！');
+                    closeModal();
+                } else {
+                    alert('分配失败：' + (data.message || '未知错误'));
+                }
+            } catch (e) {
+                console.error(e);
+                alert('保存失败');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('roleModal').classList.remove('active');
+        }
+
+        function searchUsers() {
+            renderUsers();
+        }
+
+        document.getElementById('searchInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                searchUsers();
+            }
+        });
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        init();
+    </script>
+    <script src="js/auth-check.js"></script>
+    <script src="js/user-info.js"></script>
+</body>
+</html>

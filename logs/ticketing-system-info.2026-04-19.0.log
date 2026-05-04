@@ -1,0 +1,743 @@
+2026-04-19 00:00:00.009 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 00:00:00.110 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 00:00:00.113 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 00:00:00.149 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 00:05:00.008 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 00:05:00.042 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 00:05:00.043 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 00:05:00.140 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 00:10:00.007 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 00:10:00.040 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 00:10:00.040 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 00:10:00.138 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 00:15:00.001 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 00:15:00.098 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 00:15:00.099 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 00:15:00.133 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 00:15:05.921 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 00:15:05.955 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 00:15:05.989 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 00:15:06.022 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 00:15:06.535 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-19 00:15:06.639 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-19 00:15:06.843 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-19 00:15:10.341 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-19 00:15:10.374 [main] INFO  com.ticketing.TicketingSystemApplication - Starting TicketingSystemApplication using Java 17.0.14 with PID 35140 (D:\java-project\mianshiXM\04gaiv1\target\classes started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 00:15:10.375 [main] INFO  com.ticketing.TicketingSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 00:15:11.031 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 00:15:11.034 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-19 00:15:11.059 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2026-04-19 00:15:11.228 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=37d188b1-0f6e-357f-bcf9-f5b469b6f7e1
+2026-04-19 00:15:11.659 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-19 00:15:11.669 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-19 00:15:11.670 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-19 00:15:11.670 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-19 00:15:11.723 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2026-04-19 00:15:11.723 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1310 ms
+2026-04-19 00:15:12.249 [main] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-19 00:15:12.625 [main] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-19 00:15:13.420 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 初始化向量存储服务...
+2026-04-19 00:15:13.420 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 根据配置初始化嵌入模型: embeddingProvider=auto
+2026-04-19 00:15:13.420 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 尝试初始化本地 Ollama 嵌入模型...
+2026-04-19 00:15:15.675 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用本地 Ollama 嵌入模型成功: baseUrl=http://localhost:11434, modelName=bge-m3
+2026-04-19 00:15:16.032 [main] INFO  com.ticketing.agent.vector.VectorStoreService - Qdrant 向量存储初始化成功: host=106.54.15.105, httpPort=6333, collectionName=ticketing-faq, modelType=OLLAMA
+2026-04-19 00:15:16.528 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Starting...
+2026-04-19 00:15:16.972 [main] INFO  com.zaxxer.hikari.pool.HikariPool - TicketingHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@78551853
+2026-04-19 00:15:16.974 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Start completed.
+2026-04-19 00:15:17.757 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用HTTP API获取向量库已有FAQ ID
+2026-04-19 00:15:17.963 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 成功获取向量库已有FAQ数量: 110
+2026-04-19 00:15:17.964 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 向量库中已有 FAQ 数量: 110
+2026-04-19 00:15:17.964 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 所有 FAQ 已存在于向量库，跳过添加
+2026-04-19 00:15:17.964 [main] INFO  com.ticketing.service.ChatService - 初始化向量存储完成，加载 FAQ 数量: 110
+2026-04-19 00:15:19.027 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-04-19 00:15:19.301 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@771be979, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f0f472d, org.springframework.security.web.context.SecurityContextHolderFilter@7a4de496, org.springframework.security.web.header.HeaderWriterFilter@1d31ca44, org.springframework.web.filter.CorsFilter@5d2e65bd, org.springframework.security.web.authentication.logout.LogoutFilter@1ef673ec, com.ticketing.config.RateLimitFilter@5d6b5d3d, com.ticketing.config.JwtAuthenticationFilter@60e47aab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d75b591, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@610fcd51, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5dfcebc4, org.springframework.security.web.session.SessionManagementFilter@6d2ac45a, org.springframework.security.web.access.ExceptionTranslationFilter@60dae8f4, org.springframework.security.web.access.intercept.AuthorizationFilter@7f45ac84]
+2026-04-19 00:15:20.846 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 00:15:22.820 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 00:15:22.944 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-19 00:15:22.955 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-04-19 00:15:24.209 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 00:15:24.212 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-19 00:15:24.409 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#17304e57:0/SimpleConnection@fb7747f [delegate=amqp://rabbitmq@106.54.15.105:5672/, localPort=52785]
+2026-04-19 00:15:25.593 [main] INFO  com.ticketing.TicketingSystemApplication - Started TicketingSystemApplication in 16.697 seconds (process running for 17.106)
+2026-04-19 00:15:26.094 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-19 00:15:30.396 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-19 00:16:07.494 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-19 00:16:07.495 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-19 00:16:07.496 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-19 00:20:00.000 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 00:20:00.041 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 00:20:00.042 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 00:20:00.138 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 00:25:00.005 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 00:25:00.107 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 00:25:00.108 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 00:25:00.142 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 00:30:00.005 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 00:30:00.039 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 00:30:00.040 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 00:30:00.183 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 00:35:00.000 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 00:35:00.033 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 00:35:00.034 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 00:35:00.133 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 00:40:00.011 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 00:40:00.045 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 00:40:00.045 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 00:40:00.143 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 00:43:37.059 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 00:43:37.091 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 00:43:37.125 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 00:43:37.158 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 00:43:37.229 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-19 00:43:40.863 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-19 00:43:40.896 [main] INFO  com.ticketing.TicketingSystemApplication - Starting TicketingSystemApplication using Java 17.0.14 with PID 35376 (D:\java-project\mianshiXM\04gaiv1\target\classes started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 00:43:40.897 [main] INFO  com.ticketing.TicketingSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 00:43:41.593 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 00:43:41.596 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-19 00:43:41.627 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2026-04-19 00:43:41.836 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=37d188b1-0f6e-357f-bcf9-f5b469b6f7e1
+2026-04-19 00:43:42.695 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-19 00:43:42.711 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-19 00:43:42.712 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-19 00:43:42.713 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-19 00:43:42.822 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2026-04-19 00:43:42.823 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1891 ms
+2026-04-19 00:43:43.397 [main] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-19 00:43:43.782 [main] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-19 00:43:44.577 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 初始化向量存储服务...
+2026-04-19 00:43:44.577 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 根据配置初始化嵌入模型: embeddingProvider=auto
+2026-04-19 00:43:44.577 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 尝试初始化本地 Ollama 嵌入模型...
+2026-04-19 00:43:46.869 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用本地 Ollama 嵌入模型成功: baseUrl=http://localhost:11434, modelName=bge-m3
+2026-04-19 00:43:47.168 [main] INFO  com.ticketing.agent.vector.VectorStoreService - Qdrant 向量存储初始化成功: host=106.54.15.105, httpPort=6333, collectionName=ticketing-faq, modelType=OLLAMA
+2026-04-19 00:43:47.694 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Starting...
+2026-04-19 00:43:48.165 [main] INFO  com.zaxxer.hikari.pool.HikariPool - TicketingHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a1699f0
+2026-04-19 00:43:48.166 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Start completed.
+2026-04-19 00:43:48.858 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用HTTP API获取向量库已有FAQ ID
+2026-04-19 00:43:49.044 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 成功获取向量库已有FAQ数量: 110
+2026-04-19 00:43:49.044 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 向量库中已有 FAQ 数量: 110
+2026-04-19 00:43:49.045 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 所有 FAQ 已存在于向量库，跳过添加
+2026-04-19 00:43:49.045 [main] INFO  com.ticketing.service.ChatService - 初始化向量存储完成，加载 FAQ 数量: 110
+2026-04-19 00:43:50.061 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-04-19 00:43:50.366 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66f83c76, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36f7d1f6, org.springframework.security.web.context.SecurityContextHolderFilter@355beb53, org.springframework.security.web.header.HeaderWriterFilter@276a2413, org.springframework.web.filter.CorsFilter@5d2e65bd, org.springframework.security.web.authentication.logout.LogoutFilter@34aa221a, com.ticketing.config.RateLimitFilter@5d6b5d3d, com.ticketing.config.JwtAuthenticationFilter@60e47aab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ee79ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60dae8f4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2fe0659, org.springframework.security.web.session.SessionManagementFilter@33f1c285, org.springframework.security.web.access.ExceptionTranslationFilter@5b4dafce, org.springframework.security.web.access.intercept.AuthorizationFilter@7899948d]
+2026-04-19 00:43:51.949 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 00:43:53.986 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 00:43:54.124 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-19 00:43:54.138 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-04-19 00:43:55.430 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 00:43:55.432 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-19 00:43:55.612 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#74295b73:0/SimpleConnection@5e3b83e8 [delegate=amqp://rabbitmq@106.54.15.105:5672/, localPort=57072]
+2026-04-19 00:43:56.779 [main] INFO  com.ticketing.TicketingSystemApplication - Started TicketingSystemApplication in 17.432 seconds (process running for 17.891)
+2026-04-19 00:43:57.241 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-19 00:44:01.700 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-19 00:45:00.005 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 00:45:00.110 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 00:45:00.110 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 00:45:00.148 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 00:45:28.670 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-19 00:45:28.671 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-19 00:45:28.672 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-19 00:45:39.703 [http-nio-8080-exec-6] INFO  com.ticketing.service.impl.UserServiceImpl - SM2密码解密成功
+2026-04-19 00:46:03.176 [http-nio-8080-exec-5] INFO  com.ticketing.service.impl.RefundServiceImpl - 退款释放座位成功: orderId=ORDER_4c197e61216b4e9dad22770bfb7cccb4, seatIds=[1109]
+2026-04-19 00:46:03.177 [http-nio-8080-exec-5] INFO  com.ticketing.service.impl.RefundServiceImpl - 退款处理完成: orderId=ORDER_4c197e61216b4e9dad22770bfb7cccb4, refundAmount=100
+2026-04-19 00:48:33.130 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 00:48:33.163 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 00:48:33.181 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-19 00:48:33.197 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 00:48:33.230 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 15:40:12.098 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-19 15:40:12.147 [main] INFO  com.ticketing.TicketingSystemApplication - Starting TicketingSystemApplication using Java 17.0.14 with PID 38136 (D:\java-project\mianshiXM\04gaiv1\target\classes started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 15:40:12.148 [main] INFO  com.ticketing.TicketingSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 15:40:15.065 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 15:40:15.070 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-19 15:40:15.144 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 0 Redis repository interfaces.
+2026-04-19 15:40:15.514 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=37d188b1-0f6e-357f-bcf9-f5b469b6f7e1
+2026-04-19 15:40:16.088 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-19 15:40:16.097 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-19 15:40:16.098 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-19 15:40:16.098 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-19 15:40:16.158 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2026-04-19 15:40:16.160 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3963 ms
+2026-04-19 15:40:16.511 [main] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-19 15:40:16.782 [main] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-19 15:40:17.234 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 初始化向量存储服务...
+2026-04-19 15:40:17.235 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 根据配置初始化嵌入模型: embeddingProvider=auto
+2026-04-19 15:40:17.235 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 尝试初始化本地 Ollama 嵌入模型...
+2026-04-19 15:40:21.087 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用本地 Ollama 嵌入模型成功: baseUrl=http://localhost:11434, modelName=bge-m3
+2026-04-19 15:40:21.306 [main] INFO  com.ticketing.agent.vector.VectorStoreService - Qdrant 向量存储初始化成功: host=106.54.15.105, httpPort=6333, collectionName=ticketing-faq, modelType=OLLAMA
+2026-04-19 15:40:21.619 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Starting...
+2026-04-19 15:40:22.030 [main] INFO  com.zaxxer.hikari.pool.HikariPool - TicketingHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@a450c0e
+2026-04-19 15:40:22.031 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Start completed.
+2026-04-19 15:40:22.712 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用HTTP API获取向量库已有FAQ ID
+2026-04-19 15:40:23.500 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 成功获取向量库已有FAQ数量: 110
+2026-04-19 15:40:23.501 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 向量库中已有 FAQ 数量: 110
+2026-04-19 15:40:23.501 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 所有 FAQ 已存在于向量库，跳过添加
+2026-04-19 15:40:23.501 [main] INFO  com.ticketing.service.ChatService - 初始化向量存储完成，加载 FAQ 数量: 110
+2026-04-19 15:40:24.118 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-04-19 15:40:24.255 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@28491d7e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@376441d8, org.springframework.security.web.context.SecurityContextHolderFilter@5f51ae2f, org.springframework.security.web.header.HeaderWriterFilter@fae7503, org.springframework.web.filter.CorsFilter@5ad50b02, org.springframework.security.web.authentication.logout.LogoutFilter@726e60a1, com.ticketing.config.RateLimitFilter@2ba9f743, com.ticketing.config.JwtAuthenticationFilter@7884f722, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@362552c5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@121f60f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5119415f, org.springframework.security.web.session.SessionManagementFilter@34aa221a, org.springframework.security.web.access.ExceptionTranslationFilter@6d2ac45a, org.springframework.security.web.access.intercept.AuthorizationFilter@4374bde6]
+2026-04-19 15:40:25.494 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 15:40:26.959 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 15:40:27.034 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-19 15:40:27.042 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-04-19 15:40:28.161 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 15:40:28.162 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-19 15:40:28.572 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#71bce710:0/SimpleConnection@69ad9340 [delegate=amqp://rabbitmq@106.54.15.105:5672/, localPort=52068]
+2026-04-19 15:40:29.742 [main] INFO  com.ticketing.TicketingSystemApplication - Started TicketingSystemApplication in 19.193 seconds (process running for 20.473)
+2026-04-19 15:40:30.212 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-19 15:40:33.445 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-19 15:40:39.743 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-19 15:40:39.745 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-19 15:40:39.747 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-19 15:40:53.399 [http-nio-8080-exec-2] INFO  com.ticketing.service.impl.UserServiceImpl - SM2密码解密成功
+2026-04-19 15:45:00.000 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 15:45:00.102 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 15:45:00.103 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 15:45:00.140 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 15:50:00.011 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 15:50:00.113 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 15:50:00.113 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 15:50:00.147 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 15:55:00.002 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 15:55:00.036 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 15:55:00.037 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 15:55:00.138 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 16:00:00.011 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 16:00:00.045 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 16:00:00.046 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 16:00:00.150 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 16:05:00.009 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 16:05:00.043 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 16:05:00.043 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 16:05:00.146 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 16:10:00.001 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 16:10:00.105 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 16:10:00.105 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 16:10:00.138 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 16:15:00.004 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 16:15:00.104 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 16:15:00.106 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 16:15:00.139 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 16:20:00.014 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 16:20:00.114 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 16:20:00.114 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 16:20:00.149 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 16:25:00.014 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 16:25:00.049 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 16:25:00.049 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 16:25:00.157 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 16:30:00.006 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 16:30:00.107 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 16:30:00.107 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 16:30:00.141 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 16:31:19.058 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 16:31:19.093 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 16:31:19.130 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 16:31:19.164 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 16:31:29.062 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-19 16:31:29.122 [main] INFO  com.ticketing.TicketingSystemApplication - Starting TicketingSystemApplication using Java 17.0.14 with PID 5872 (D:\java-project\mianshiXM\04gaiv1\target\classes started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 16:31:29.122 [main] INFO  com.ticketing.TicketingSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 16:31:30.965 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 16:31:30.968 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-19 16:31:31.019 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 0 Redis repository interfaces.
+2026-04-19 16:31:31.371 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=37d188b1-0f6e-357f-bcf9-f5b469b6f7e1
+2026-04-19 16:31:32.265 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-19 16:31:32.273 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-19 16:31:32.274 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-19 16:31:32.274 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-19 16:31:32.349 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2026-04-19 16:31:32.349 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3162 ms
+2026-04-19 16:31:32.830 [main] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-19 16:31:33.268 [main] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-19 16:31:33.967 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 初始化向量存储服务...
+2026-04-19 16:31:33.969 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 根据配置初始化嵌入模型: embeddingProvider=auto
+2026-04-19 16:31:33.969 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 尝试初始化本地 Ollama 嵌入模型...
+2026-04-19 16:31:37.899 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用本地 Ollama 嵌入模型成功: baseUrl=http://localhost:11434, modelName=bge-m3
+2026-04-19 16:31:38.202 [main] INFO  com.ticketing.agent.vector.VectorStoreService - Qdrant 向量存储初始化成功: host=106.54.15.105, httpPort=6333, collectionName=ticketing-faq, modelType=OLLAMA
+2026-04-19 16:31:38.770 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Starting...
+2026-04-19 16:31:39.243 [main] INFO  com.zaxxer.hikari.pool.HikariPool - TicketingHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@68f489d1
+2026-04-19 16:31:39.245 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Start completed.
+2026-04-19 16:31:39.995 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用HTTP API获取向量库已有FAQ ID
+2026-04-19 16:31:40.156 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 成功获取向量库已有FAQ数量: 110
+2026-04-19 16:31:40.157 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 向量库中已有 FAQ 数量: 110
+2026-04-19 16:31:40.158 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 所有 FAQ 已存在于向量库，跳过添加
+2026-04-19 16:31:40.159 [main] INFO  com.ticketing.service.ChatService - 初始化向量存储完成，加载 FAQ 数量: 110
+2026-04-19 16:31:41.062 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-04-19 16:31:41.292 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48a1fee2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55365b65, org.springframework.security.web.context.SecurityContextHolderFilter@79696aef, org.springframework.security.web.header.HeaderWriterFilter@7191b5ac, org.springframework.web.filter.CorsFilter@7cec3975, org.springframework.security.web.authentication.logout.LogoutFilter@33d49a51, com.ticketing.config.RateLimitFilter@60c4cf2b, com.ticketing.config.JwtAuthenticationFilter@1da5c19d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d7bb4da, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3428a4d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5070d54c, org.springframework.security.web.session.SessionManagementFilter@36fb5de2, org.springframework.security.web.access.ExceptionTranslationFilter@26123977, org.springframework.security.web.access.intercept.AuthorizationFilter@6dfd07c8]
+2026-04-19 16:31:42.792 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 16:31:44.707 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 16:31:44.816 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-19 16:31:44.828 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-04-19 16:31:46.086 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 16:31:46.088 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-19 16:31:46.272 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6547ad5e:0/SimpleConnection@61799b9c [delegate=amqp://rabbitmq@106.54.15.105:5672/, localPort=60147]
+2026-04-19 16:31:47.482 [main] INFO  com.ticketing.TicketingSystemApplication - Started TicketingSystemApplication in 20.411 seconds (process running for 26.452)
+2026-04-19 16:31:47.973 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-19 16:31:53.603 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-19 16:32:24.871 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-19 16:32:24.871 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-19 16:32:24.873 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-04-19 16:33:36.780 [http-nio-8080-exec-5] INFO  com.ticketing.utils.RedisDistributedLock - 线程 50 获取锁 seat_lock_1000 成功，过期时间: 30秒
+2026-04-19 16:33:37.577 [http-nio-8080-exec-5] INFO  com.ticketing.utils.RedisDistributedLock - 线程 50 释放锁 seat_lock_1000 成功
+2026-04-19 16:33:37.962 [http-nio-8080-exec-1] INFO  com.ticketing.producer.OrderMessageProducer - 发送订单创建消息成功: ORDER_7de677bf5b234ac286738e463db06de6, 消息ID: 9d8ca247-4e32-4b33-8839-5e674a5f0473
+2026-04-19 16:33:37.964 [http-nio-8080-exec-1] INFO  com.ticketing.producer.OrderMessageProducer - 发送延迟消息消息成功: ORDER_7de677bf5b234ac286738e463db06de6, 消息ID: 0dd2b06f-89b4-4ec9-a7ad-17c219140fa5
+2026-04-19 16:33:38.036 [Thread-5] INFO  com.ticketing.service.impl.SessionServiceImpl - 延迟双删缓存完成 - activityId: 1000, sessionId: 1000
+2026-04-19 16:33:38.852 [http-nio-8080-exec-3] INFO  com.ticketing.utils.RedisDistributedLock - 线程 48 获取锁 pay_order_ORDER_7de677bf5b234ac286738e463db06de6 成功，过期时间: 30秒
+2026-04-19 16:33:38.986 [http-nio-8080-exec-3] INFO  com.ticketing.service.impl.OrderServiceImpl - 从Redis获取到座位信息: orderId=ORDER_7de677bf5b234ac286738e463db06de6, seatIds=[1027]
+2026-04-19 16:33:39.431 [http-nio-8080-exec-3] INFO  com.ticketing.producer.OrderMessageProducer - 发送订单支付消息成功: ORDER_7de677bf5b234ac286738e463db06de6, 消息ID: c9350742-fc5b-42e9-9ca6-e2c47ece3926
+2026-04-19 16:33:39.431 [http-nio-8080-exec-3] INFO  com.ticketing.service.impl.OrderServiceImpl - 订单支付成功: orderId=ORDER_7de677bf5b234ac286738e463db06de6, seatIds=[1027]
+2026-04-19 16:33:39.464 [http-nio-8080-exec-3] INFO  com.ticketing.utils.RedisDistributedLock - 线程 48 释放锁 pay_order_ORDER_7de677bf5b234ac286738e463db06de6 成功
+2026-04-19 16:35:00.004 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 16:35:00.104 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 16:35:00.104 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 16:35:00.147 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 16:36:20.056 [http-nio-8080-exec-10] INFO  com.ticketing.service.impl.UserServiceImpl - SM2密码解密成功
+2026-04-19 16:40:00.002 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 16:40:00.037 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 16:40:00.037 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 16:40:00.137 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 16:45:00.012 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 16:45:00.112 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 16:45:00.113 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 16:45:00.145 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 16:46:25.152 [http-nio-8080-exec-6] INFO  com.ticketing.service.impl.UserServiceImpl - SM2密码解密成功
+2026-04-19 16:50:00.008 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 16:50:00.106 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 16:50:00.107 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 16:50:00.140 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 16:55:00.013 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 16:55:00.112 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 16:55:00.112 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 16:55:00.146 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 17:00:00.000 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 17:00:00.099 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 17:00:00.099 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 17:00:00.133 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 17:05:00.004 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 17:05:00.038 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 17:05:00.038 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 17:05:00.136 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 17:10:00.008 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 17:10:00.109 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 17:10:00.109 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 17:10:00.143 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 17:15:00.015 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 17:15:00.049 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 17:15:00.050 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 17:15:00.152 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 17:16:59.626 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 17:16:59.661 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 17:16:59.695 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 17:16:59.732 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 18:56:40.036 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-19 18:56:40.081 [main] INFO  com.ticketing.TicketingSystemApplication - Starting TicketingSystemApplication using Java 17.0.14 with PID 54296 (D:\java-project\mianshiXM\04gaiv1\target\classes started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 18:56:40.081 [main] INFO  com.ticketing.TicketingSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 18:56:41.955 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 18:56:41.958 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-19 18:56:41.987 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2026-04-19 18:56:42.198 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=37d188b1-0f6e-357f-bcf9-f5b469b6f7e1
+2026-04-19 18:56:42.729 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-19 18:56:42.738 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-19 18:56:42.739 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-19 18:56:42.741 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-19 18:56:42.794 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2026-04-19 18:56:42.795 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2677 ms
+2026-04-19 18:56:43.126 [main] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-19 18:56:43.396 [main] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-19 18:56:43.826 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 初始化向量存储服务...
+2026-04-19 18:56:43.826 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 根据配置初始化嵌入模型: embeddingProvider=auto
+2026-04-19 18:56:43.826 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 尝试初始化本地 Ollama 嵌入模型...
+2026-04-19 18:56:47.886 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用本地 Ollama 嵌入模型成功: baseUrl=http://localhost:11434, modelName=bge-m3
+2026-04-19 18:56:48.129 [main] INFO  com.ticketing.agent.vector.VectorStoreService - Qdrant 向量存储初始化成功: host=106.54.15.105, httpPort=6333, collectionName=ticketing-faq, modelType=OLLAMA
+2026-04-19 18:56:48.484 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Starting...
+2026-04-19 18:56:48.897 [main] INFO  com.zaxxer.hikari.pool.HikariPool - TicketingHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@70c1d791
+2026-04-19 18:56:48.899 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Start completed.
+2026-04-19 18:56:49.658 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用HTTP API获取向量库已有FAQ ID
+2026-04-19 18:56:49.810 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 成功获取向量库已有FAQ数量: 110
+2026-04-19 18:56:49.811 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 向量库中已有 FAQ 数量: 110
+2026-04-19 18:56:49.811 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 所有 FAQ 已存在于向量库，跳过添加
+2026-04-19 18:56:49.811 [main] INFO  com.ticketing.service.ChatService - 初始化向量存储完成，加载 FAQ 数量: 110
+2026-04-19 18:56:50.523 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-04-19 18:56:50.683 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3a0efd2d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@362552c5, org.springframework.security.web.context.SecurityContextHolderFilter@238db45, org.springframework.security.web.header.HeaderWriterFilter@6c8717d6, org.springframework.web.filter.CorsFilter@7fd3fd06, org.springframework.security.web.authentication.logout.LogoutFilter@610fcd51, com.ticketing.config.RateLimitFilter@1b732dd, com.ticketing.config.JwtAuthenticationFilter@283e1759, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d17e7be, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d3d3382, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@121f60f9, org.springframework.security.web.session.SessionManagementFilter@12142161, org.springframework.security.web.access.ExceptionTranslationFilter@76b984cc, org.springframework.security.web.access.intercept.AuthorizationFilter@61c8bad2]
+2026-04-19 18:56:51.926 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 18:56:53.395 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 18:56:53.469 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-19 18:56:53.478 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-04-19 18:56:54.597 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 18:56:54.599 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-19 18:56:54.771 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6680d488:0/SimpleConnection@7d2c6f30 [delegate=amqp://rabbitmq@106.54.15.105:5672/, localPort=50390]
+2026-04-19 18:56:55.947 [main] INFO  com.ticketing.TicketingSystemApplication - Started TicketingSystemApplication in 17.502 seconds (process running for 18.575)
+2026-04-19 18:56:56.387 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-19 18:57:00.688 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-19 18:57:06.677 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-19 18:57:06.677 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-19 18:57:06.678 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-19 18:57:14.665 [http-nio-8080-exec-4] INFO  com.ticketing.service.impl.UserServiceImpl - SM2密码解密成功
+2026-04-19 18:58:05.320 [http-nio-8080-exec-9] INFO  com.ticketing.service.impl.UserServiceImpl - SM2密码解密成功
+2026-04-19 19:00:00.011 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 19:00:00.052 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 19:00:00.052 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 19:00:00.153 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 19:01:40.622 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 19:01:40.631 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-19 19:01:40.655 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 19:01:40.701 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 19:01:40.734 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 19:01:40.756 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-19 20:06:56.721 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-19 20:06:56.755 [main] INFO  com.ticketing.TicketingSystemApplication - Starting TicketingSystemApplication using Java 17.0.14 with PID 11472 (D:\java-project\mianshiXM\04gaiv1\target\classes started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 20:06:56.756 [main] INFO  com.ticketing.TicketingSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 20:06:57.389 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 20:06:57.392 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-19 20:06:57.415 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2026-04-19 20:06:57.579 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=37d188b1-0f6e-357f-bcf9-f5b469b6f7e1
+2026-04-19 20:06:57.996 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-19 20:06:58.004 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-19 20:06:58.005 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-19 20:06:58.005 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-19 20:06:58.050 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2026-04-19 20:06:58.051 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1263 ms
+2026-04-19 20:06:58.305 [main] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-19 20:06:58.502 [main] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-19 20:06:58.850 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 初始化向量存储服务...
+2026-04-19 20:06:58.850 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 根据配置初始化嵌入模型: embeddingProvider=auto
+2026-04-19 20:06:58.850 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 尝试初始化本地 Ollama 嵌入模型...
+2026-04-19 20:07:01.140 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用本地 Ollama 嵌入模型成功: baseUrl=http://localhost:11434, modelName=bge-m3
+2026-04-19 20:07:01.303 [main] INFO  com.ticketing.agent.vector.VectorStoreService - Qdrant 向量存储初始化成功: host=106.54.15.105, httpPort=6333, collectionName=ticketing-faq, modelType=OLLAMA
+2026-04-19 20:07:01.554 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Starting...
+2026-04-19 20:07:02.014 [main] INFO  com.zaxxer.hikari.pool.HikariPool - TicketingHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@71eb2680
+2026-04-19 20:07:02.015 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Start completed.
+2026-04-19 20:07:02.728 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用HTTP API获取向量库已有FAQ ID
+2026-04-19 20:07:02.879 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 成功获取向量库已有FAQ数量: 110
+2026-04-19 20:07:02.880 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 向量库中已有 FAQ 数量: 110
+2026-04-19 20:07:02.880 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 所有 FAQ 已存在于向量库，跳过添加
+2026-04-19 20:07:02.880 [main] INFO  com.ticketing.service.ChatService - 初始化向量存储完成，加载 FAQ 数量: 110
+2026-04-19 20:07:03.442 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-04-19 20:07:03.558 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5c253666, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d2ac45a, org.springframework.security.web.context.SecurityContextHolderFilter@47d64360, org.springframework.security.web.header.HeaderWriterFilter@9835108, org.springframework.web.filter.CorsFilter@539dd2d0, org.springframework.security.web.authentication.logout.LogoutFilter@ab186cf, com.ticketing.config.RateLimitFilter@71d0b8a4, com.ticketing.config.JwtAuthenticationFilter@7fcc3745, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56031fa1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b0e3a68, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c3a1db2, org.springframework.security.web.session.SessionManagementFilter@3833f1ce, org.springframework.security.web.access.ExceptionTranslationFilter@36887d1c, org.springframework.security.web.access.intercept.AuthorizationFilter@12de75f8]
+2026-04-19 20:07:04.787 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 20:07:06.229 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 20:07:06.296 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-19 20:07:06.303 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-04-19 20:07:07.421 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 20:07:07.423 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-19 20:07:07.585 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#7a3a503b:0/SimpleConnection@388f26e2 [delegate=amqp://rabbitmq@106.54.15.105:5672/, localPort=52720]
+2026-04-19 20:07:08.768 [main] INFO  com.ticketing.TicketingSystemApplication - Started TicketingSystemApplication in 13.631 seconds (process running for 14.129)
+2026-04-19 20:07:09.314 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-19 20:07:12.796 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-19 20:10:00.011 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 20:10:00.050 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 20:10:00.052 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 20:10:00.167 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 20:15:00.012 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 20:15:00.107 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 20:15:00.108 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 20:15:00.247 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 20:20:00.003 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 20:20:00.038 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 20:20:00.038 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 20:20:00.147 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 20:25:00.003 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 20:25:00.139 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 20:25:00.139 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 20:25:00.175 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 20:25:46.312 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-19 20:25:46.314 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-19 20:25:46.316 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-04-19 20:30:00.011 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 20:30:00.046 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 20:30:00.046 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 20:30:00.166 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 20:35:00.004 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 20:35:00.113 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 20:35:00.113 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 20:35:00.148 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 20:40:00.008 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 20:40:00.043 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 20:40:00.043 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 20:40:00.152 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 20:45:00.010 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 20:45:00.114 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 20:45:00.114 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 20:45:00.148 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 20:50:00.006 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 20:50:00.040 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 20:50:00.042 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 20:50:00.143 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 20:55:00.000 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 20:55:00.110 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 20:55:00.111 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 20:55:00.151 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 21:00:00.008 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 21:00:00.109 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 21:00:00.111 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 21:00:00.144 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 21:00:55.263 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 21:00:55.312 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 21:00:55.314 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2026-04-19 21:00:55.347 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 21:00:58.761 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-19 21:00:58.795 [main] INFO  com.ticketing.TicketingSystemApplication - Starting TicketingSystemApplication using Java 17.0.14 with PID 59172 (D:\java-project\mianshiXM\04gaiv1\target\classes started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 21:00:58.797 [main] INFO  com.ticketing.TicketingSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 21:00:59.472 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 21:00:59.477 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-19 21:00:59.505 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2026-04-19 21:00:59.794 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=37d188b1-0f6e-357f-bcf9-f5b469b6f7e1
+2026-04-19 21:01:00.685 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-19 21:01:00.697 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-19 21:01:00.700 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-19 21:01:00.700 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-19 21:01:00.784 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2026-04-19 21:01:00.784 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1954 ms
+2026-04-19 21:01:01.302 [main] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-19 21:01:01.698 [main] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-19 21:01:02.555 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 初始化向量存储服务...
+2026-04-19 21:01:02.556 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 根据配置初始化嵌入模型: embeddingProvider=auto
+2026-04-19 21:01:02.556 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 尝试初始化本地 Ollama 嵌入模型...
+2026-04-19 21:01:05.024 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用本地 Ollama 嵌入模型成功: baseUrl=http://localhost:11434, modelName=bge-m3
+2026-04-19 21:01:05.354 [main] INFO  com.ticketing.agent.vector.VectorStoreService - Qdrant 向量存储初始化成功: host=106.54.15.105, httpPort=6333, collectionName=ticketing-faq, modelType=OLLAMA
+2026-04-19 21:01:05.910 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Starting...
+2026-04-19 21:01:06.415 [main] INFO  com.zaxxer.hikari.pool.HikariPool - TicketingHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e0473f1
+2026-04-19 21:01:06.416 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Start completed.
+2026-04-19 21:01:07.169 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用HTTP API获取向量库已有FAQ ID
+2026-04-19 21:01:07.338 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 成功获取向量库已有FAQ数量: 110
+2026-04-19 21:01:07.338 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 向量库中已有 FAQ 数量: 110
+2026-04-19 21:01:07.338 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 所有 FAQ 已存在于向量库，跳过添加
+2026-04-19 21:01:07.338 [main] INFO  com.ticketing.service.ChatService - 初始化向量存储完成，加载 FAQ 数量: 110
+2026-04-19 21:01:08.287 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-04-19 21:01:08.530 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34aa221a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79debf26, org.springframework.security.web.context.SecurityContextHolderFilter@1d7da0ea, org.springframework.security.web.header.HeaderWriterFilter@47d64360, org.springframework.web.filter.CorsFilter@b529d7e, org.springframework.security.web.authentication.logout.LogoutFilter@fae7503, com.ticketing.config.RateLimitFilter@3eadad14, com.ticketing.config.JwtAuthenticationFilter@4e9e0c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a5c570, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72324f19, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61c8bad2, org.springframework.security.web.session.SessionManagementFilter@276a2413, org.springframework.security.web.access.ExceptionTranslationFilter@2169de0, org.springframework.security.web.access.intercept.AuthorizationFilter@7aec4c5b]
+2026-04-19 21:01:10.198 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 21:01:12.317 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 21:01:12.444 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-19 21:01:12.457 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-04-19 21:01:13.729 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 21:01:13.730 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-19 21:01:13.936 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6ad90fc0:0/SimpleConnection@751069ab [delegate=amqp://rabbitmq@106.54.15.105:5672/, localPort=50631]
+2026-04-19 21:01:15.234 [main] INFO  com.ticketing.TicketingSystemApplication - Started TicketingSystemApplication in 18.063 seconds (process running for 18.585)
+2026-04-19 21:01:15.736 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-19 21:01:20.181 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-19 21:01:48.644 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-19 21:01:48.644 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-19 21:01:48.646 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-04-19 21:04:33.804 [http-nio-8080-exec-3] INFO  com.ticketing.service.impl.AuthServiceImpl - 刷新用户权限缓存: userId=16, roles=[ADMIN], permissions=[activity:view, activity:add, activity:edit, activity:delete, order:view, chat:view, faq:view, faq:add, faq:edit, faq:delete, role:view, role:add, role:edit, role:delete, role:assign, permission:view, permission:assign, token=****** token=****** refund:audit, refund:view]
+2026-04-19 21:05:00.011 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 21:05:00.093 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 21:05:00.094 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 21:05:00.213 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 21:05:26.107 [http-nio-8080-exec-3] INFO  com.ticketing.service.impl.AuthServiceImpl - 刷新用户权限缓存: userId=16, roles=[CHESHI], permissions=[activity:view, activity:add, activity:edit, activity:delete, order:view, chat:view, faq:view, faq:add, faq:edit, faq:delete, role:view, permission:view, token=****** refund:audit, refund:view]
+2026-04-19 21:06:46.179 [http-nio-8080-exec-10] INFO  com.ticketing.service.impl.UserServiceImpl - SM2密码解密成功
+2026-04-19 21:10:00.007 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 21:10:00.111 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 21:10:00.112 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 21:10:00.148 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 21:15:00.008 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 21:15:00.112 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 21:15:00.112 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 21:15:00.149 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 21:20:00.012 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 21:20:00.048 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 21:20:00.049 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 21:20:00.152 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 21:25:00.014 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 21:25:00.118 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 21:25:00.119 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 21:25:00.154 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 21:30:00.001 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 21:30:00.104 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 21:30:00.105 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 21:30:00.140 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 21:35:00.002 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 21:35:00.108 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 21:35:00.108 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 21:35:00.144 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 21:40:00.004 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 21:40:00.108 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 21:40:00.108 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 21:40:00.145 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 21:44:35.559 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 21:44:35.593 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 21:44:35.625 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 21:44:35.658 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 21:46:22.550 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-19 21:46:22.632 [main] INFO  com.ticketing.controller.AuthControllerTest - Starting AuthControllerTest using Java 17.0.14 with PID 57692 (started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 21:46:22.634 [main] INFO  com.ticketing.controller.AuthControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 21:46:26.051 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-04-19 21:46:27.425 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@329ab624, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@401358e5, org.springframework.security.web.context.SecurityContextHolderFilter@6ff708d, org.springframework.security.web.header.HeaderWriterFilter@64cc5f34, org.springframework.web.filter.CorsFilter@4d2af40, org.springframework.security.web.csrf.CsrfFilter@746169cd, org.springframework.security.web.authentication.logout.LogoutFilter@b70ad7a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@42530cd6, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@9edb372, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2d68af14, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4ea78b91, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1aa75e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53b2e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a24170b, org.springframework.security.web.access.ExceptionTranslationFilter@7dafb9f9, org.springframework.security.web.access.intercept.AuthorizationFilter@2f0166d7]
+2026-04-19 21:46:27.499 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-19 21:46:27.499 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-19 21:46:27.502 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+2026-04-19 21:46:27.539 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-19 21:46:27.698 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.AuthControllerTest$HasPermission]: HasPermission does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:27.715 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.AuthControllerTest$HasPermission
+2026-04-19 21:46:27.736 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.AuthControllerTest$GetUserRoleCodes]: GetUserRoleCodes does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:27.744 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.AuthControllerTest$GetUserRoleCodes
+2026-04-19 21:46:27.759 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.AuthControllerTest$GetUserPermissions]: GetUserPermissions does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:27.767 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.AuthControllerTest$GetUserPermissions
+2026-04-19 21:46:27.784 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:27.791 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.OrderControllerTest
+2026-04-19 21:46:27.795 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.OrderControllerTest$CancelOrder]: CancelOrder does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:27.801 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.OrderControllerTest$CancelOrder
+2026-04-19 21:46:29.082 [main] INFO  com.ticketing.controller.OrderControllerTest - Starting OrderControllerTest using Java 17.0.14 with PID 57692 (started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 21:46:29.084 [main] INFO  com.ticketing.controller.OrderControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 21:46:29.449 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-19 21:46:29.480 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.OrderControllerTest$PayOrder]: PayOrder does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:29.484 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.OrderControllerTest$PayOrder
+2026-04-19 21:46:29.496 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.OrderControllerTest$GetOrderPage]: GetOrderPage does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:29.500 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.OrderControllerTest$GetOrderPage
+2026-04-19 21:46:29.510 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.OrderControllerTest$GetOrderList]: GetOrderList does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:29.515 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.OrderControllerTest$GetOrderList
+2026-04-19 21:46:29.523 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.OrderControllerTest$GetOrderDetail]: GetOrderDetail does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:29.527 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.OrderControllerTest$GetOrderDetail
+2026-04-19 21:46:29.544 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:29.550 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest
+2026-04-19 21:46:29.553 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest$SendEmailCode]: SendEmailCode does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:29.558 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest$SendEmailCode
+2026-04-19 21:46:30.852 [main] INFO  com.ticketing.controller.UserControllerTest - Starting UserControllerTest using Java 17.0.14 with PID 57692 (started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 21:46:30.853 [main] INFO  com.ticketing.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 21:46:31.109 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-04-19 21:46:31.193 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10af6715, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@425fdf53, org.springframework.security.web.context.SecurityContextHolderFilter@6bf9c657, org.springframework.security.web.header.HeaderWriterFilter@54dc3d0a, org.springframework.web.filter.CorsFilter@589b445d, org.springframework.security.web.csrf.CsrfFilter@74e17634, org.springframework.security.web.authentication.logout.LogoutFilter@6f8cd739, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e328d88, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6cfc536a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2ad404c0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@78ea668, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14564dca, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@597d1122, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41285940, org.springframework.security.web.access.ExceptionTranslationFilter@6ea4784a, org.springframework.security.web.access.intercept.AuthorizationFilter@50a0404b]
+2026-04-19 21:46:31.202 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-19 21:46:31.202 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-19 21:46:31.203 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2026-04-19 21:46:31.208 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-19 21:46:31.216 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest$Logout]: Logout does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:31.224 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest$Logout
+2026-04-19 21:46:31.231 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest$VerifyToken]: VerifyToken does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:31.234 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest$VerifyToken
+2026-04-19 21:46:31.250 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest$GetVerificationCode]: GetVerificationCode does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:31.254 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest$GetVerificationCode
+2026-04-19 21:46:31.261 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest$Register]: Register does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:31.264 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest$Register
+2026-04-19 21:46:31.273 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest$Login]: Login does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:31.283 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest$Login
+2026-04-19 21:46:31.442 [main] INFO  org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2026-04-19 21:46:31.450 [main] INFO  org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2026-04-19 21:46:32.139 [main] INFO  o.t.d.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([C:\Program Files\Common Files\Oracle\Java\javapath, C:\Program Files (x86)\VMware\VMware Workstation\bin\, C:\ProgramData\Oracle\Java\javapath, C:\WINDOWS\system32, C:\WINDOWS, C:\WINDOWS\System32\Wbem, C:\WINDOWS\System32\WindowsPowerShell\v1.0\, C:\WINDOWS\System32\OpenSSH\, D:\Anaconda, D:\Anaconda\Library\bin, D:\Anaconda\Scripts, C:\Program Files\Bandizip\, D:\Mingw64\mingw64\bin, D:\texlive\texlive\2023\bin\windows, C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR, C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common, C:\Program Files\Git\cmd, C:\Program Files (x86)\Tencent\微信web开发者工具\dll, C:\Program Files (x86)\NetSarang\Xshell 8\, C:\Program Files\Erlang OTP\bin, C:\Program Files\RabbitMQ Server\rabbitmq_server-4.1.0\sbin, C:\Program Files\Java\jdk-17\bin, C:\Program Files\Java\jdk-17\jre\bin, C:\Program Files\dotnet\, C:\Program Files\nodejs\, D:\IDEA\apache-maven-3.9.9\bin, D:\Jemeter\apache-jmeter-5.6.3\bin, C:\Program Files\Docker\Docker\resources\bin, d:\Trae\traeInter\Trae\bin, C:\Program Files\MySQL\MySQL Shell 8.0\bin\, C:\Users\mao\AppData\Local\Microsoft\WindowsApps, , C:\Users\mao\AppData\Local\Programs\Microsoft VS Code\bin, C:\Users\mao\AppData\Roaming\npm, C:\Users\mao\AppData\Local\Programs\Ollama])
+2026-04-19 21:46:32.146 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.integration.AuthIntegrationTest]: AuthIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:46:32.154 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.integration.AuthIntegrationTest
+2026-04-19 21:46:32.649 [main] INFO  com.ticketing.service.impl.AuthServiceImpl - 刷新用户权限缓存: userId=1, roles=[], permissions=[]
+2026-04-19 21:46:33.070 [main] INFO  com.ticketing.service.impl.OrderServiceImpl - 释放订单座位成功: 锁定订单ID=LOCK_123
+2026-04-19 21:46:33.452 [main] INFO  com.ticketing.service.impl.UserServiceImpl - 邮箱验证码已发送: new@example.com
+2026-04-19 21:46:33.667 [main] INFO  com.ticketing.service.impl.UserServiceImpl - 用户 null 已分配 NORMAL_USER 角色
+2026-04-19 21:54:37.362 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-19 21:54:37.465 [main] INFO  com.ticketing.controller.AuthControllerTest - Starting AuthControllerTest using Java 17.0.14 with PID 58648 (started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 21:54:37.466 [main] INFO  com.ticketing.controller.AuthControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 21:54:40.892 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-04-19 21:54:42.250 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5a52b5f8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e8d3d43, org.springframework.security.web.context.SecurityContextHolderFilter@7da298aa, org.springframework.security.web.header.HeaderWriterFilter@500497e3, org.springframework.web.filter.CorsFilter@60b201c, org.springframework.security.web.csrf.CsrfFilter@693e254e, org.springframework.security.web.authentication.logout.LogoutFilter@728055bf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5e30ea7c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@61e33118, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@630fa11e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@69ebb009, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44bd3dc5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77ea06bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2cbd35f2, org.springframework.security.web.access.ExceptionTranslationFilter@18a8a42b, org.springframework.security.web.access.intercept.AuthorizationFilter@19a71722]
+2026-04-19 21:54:42.343 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-19 21:54:42.344 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-19 21:54:42.345 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2026-04-19 21:54:42.384 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-19 21:54:42.521 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.AuthControllerTest$HasPermission]: HasPermission does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:42.540 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.AuthControllerTest$HasPermission
+2026-04-19 21:54:42.569 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.AuthControllerTest$GetUserRoleCodes]: GetUserRoleCodes does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:42.581 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.AuthControllerTest$GetUserRoleCodes
+2026-04-19 21:54:42.597 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.AuthControllerTest$GetUserPermissions]: GetUserPermissions does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:42.606 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.AuthControllerTest$GetUserPermissions
+2026-04-19 21:54:42.627 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:42.637 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.OrderControllerTest
+2026-04-19 21:54:42.642 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.OrderControllerTest$CancelOrder]: CancelOrder does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:42.651 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.OrderControllerTest$CancelOrder
+2026-04-19 21:54:43.934 [main] INFO  com.ticketing.controller.OrderControllerTest - Starting OrderControllerTest using Java 17.0.14 with PID 58648 (started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 21:54:43.934 [main] INFO  com.ticketing.controller.OrderControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 21:54:44.280 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-19 21:54:44.304 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.OrderControllerTest$PayOrder]: PayOrder does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:44.315 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.OrderControllerTest$PayOrder
+2026-04-19 21:54:44.329 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.OrderControllerTest$GetOrderPage]: GetOrderPage does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:44.339 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.OrderControllerTest$GetOrderPage
+2026-04-19 21:54:44.353 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.OrderControllerTest$GetOrderList]: GetOrderList does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:44.362 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.OrderControllerTest$GetOrderList
+2026-04-19 21:54:44.376 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.OrderControllerTest$GetOrderDetail]: GetOrderDetail does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:44.387 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.OrderControllerTest$GetOrderDetail
+2026-04-19 21:54:44.414 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:44.422 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest
+2026-04-19 21:54:44.426 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest$SendEmailCode]: SendEmailCode does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:44.432 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest$SendEmailCode
+2026-04-19 21:54:45.687 [main] INFO  com.ticketing.controller.UserControllerTest - Starting UserControllerTest using Java 17.0.14 with PID 58648 (started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 21:54:45.689 [main] INFO  com.ticketing.controller.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 21:54:46.025 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-04-19 21:54:46.119 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2c20b04a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4bb51f15, org.springframework.security.web.context.SecurityContextHolderFilter@10af6715, org.springframework.security.web.header.HeaderWriterFilter@78ea668, org.springframework.web.filter.CorsFilter@22626d92, org.springframework.security.web.csrf.CsrfFilter@50a0404b, org.springframework.security.web.authentication.logout.LogoutFilter@7d31b371, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7613e5b4, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2ad404c0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6f37fb78, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6c97a3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@425fdf53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@589b445d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@463ca434, org.springframework.security.web.access.ExceptionTranslationFilter@e328d88, org.springframework.security.web.access.intercept.AuthorizationFilter@75f25013]
+2026-04-19 21:54:46.132 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-04-19 21:54:46.134 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2026-04-19 21:54:46.135 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2026-04-19 21:54:46.142 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-19 21:54:46.159 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest$Logout]: Logout does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:46.170 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest$Logout
+2026-04-19 21:54:46.182 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest$VerifyToken]: VerifyToken does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:46.191 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest$VerifyToken
+2026-04-19 21:54:46.205 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest$GetVerificationCode]: GetVerificationCode does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:46.209 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest$GetVerificationCode
+2026-04-19 21:54:46.217 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest$Register]: Register does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:46.223 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest$Register
+2026-04-19 21:54:46.233 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.controller.UserControllerTest$Login]: Login does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:46.246 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.controller.UserControllerTest$Login
+2026-04-19 21:54:46.393 [main] INFO  org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2026-04-19 21:54:46.399 [main] INFO  org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2026-04-19 21:54:47.008 [main] INFO  o.t.d.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([C:\Program Files\Common Files\Oracle\Java\javapath, C:\Program Files (x86)\VMware\VMware Workstation\bin\, C:\ProgramData\Oracle\Java\javapath, C:\WINDOWS\system32, C:\WINDOWS, C:\WINDOWS\System32\Wbem, C:\WINDOWS\System32\WindowsPowerShell\v1.0\, C:\WINDOWS\System32\OpenSSH\, D:\Anaconda, D:\Anaconda\Library\bin, D:\Anaconda\Scripts, C:\Program Files\Bandizip\, D:\Mingw64\mingw64\bin, D:\texlive\texlive\2023\bin\windows, C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR, C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common, C:\Program Files\Git\cmd, C:\Program Files (x86)\Tencent\微信web开发者工具\dll, C:\Program Files (x86)\NetSarang\Xshell 8\, C:\Program Files\Erlang OTP\bin, C:\Program Files\RabbitMQ Server\rabbitmq_server-4.1.0\sbin, C:\Program Files\Java\jdk-17\bin, C:\Program Files\Java\jdk-17\jre\bin, C:\Program Files\dotnet\, C:\Program Files\nodejs\, D:\IDEA\apache-maven-3.9.9\bin, D:\Jemeter\apache-jmeter-5.6.3\bin, C:\Program Files\Docker\Docker\resources\bin, d:\Trae\traeInter\Trae\bin, C:\Program Files\MySQL\MySQL Shell 8.0\bin\, C:\Users\mao\AppData\Local\Microsoft\WindowsApps, , C:\Users\mao\AppData\Local\Programs\Microsoft VS Code\bin, C:\Users\mao\AppData\Roaming\npm, C:\Users\mao\AppData\Local\Programs\Ollama])
+2026-04-19 21:54:47.013 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ticketing.integration.AuthIntegrationTest]: AuthIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-19 21:54:47.024 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ticketing.TicketingSystemApplication for test class com.ticketing.integration.AuthIntegrationTest
+2026-04-19 21:54:47.440 [main] INFO  com.ticketing.service.impl.AuthServiceImpl - 刷新用户权限缓存: userId=1, roles=[], permissions=[]
+2026-04-19 21:54:47.811 [main] INFO  com.ticketing.service.impl.OrderServiceImpl - 释放订单座位成功: 锁定订单ID=LOCK_123
+2026-04-19 21:54:48.150 [main] INFO  com.ticketing.service.impl.UserServiceImpl - 邮箱验证码已发送: new@example.com
+2026-04-19 21:54:48.413 [main] INFO  com.ticketing.service.impl.UserServiceImpl - 用户 null 已分配 NORMAL_USER 角色
+2026-04-19 22:48:36.115 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-19 22:48:36.151 [main] INFO  com.ticketing.TicketingSystemApplication - Starting TicketingSystemApplication using Java 17.0.14 with PID 55004 (D:\java-project\mianshiXM\04gaiv1\target\classes started by mao in D:\java-project\mianshiXM\04gaiv1)
+2026-04-19 22:48:36.151 [main] INFO  com.ticketing.TicketingSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-19 22:48:36.908 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-19 22:48:36.910 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-19 22:48:36.938 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2026-04-19 22:48:37.180 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=37d188b1-0f6e-357f-bcf9-f5b469b6f7e1
+2026-04-19 22:48:38.023 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-19 22:48:38.036 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-19 22:48:38.039 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-19 22:48:38.039 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-04-19 22:48:38.137 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2026-04-19 22:48:38.138 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1951 ms
+2026-04-19 22:48:38.644 [main] INFO  com.ticketing.agent.ai.AiModelService - 初始化AI模型，提供商: deepseek
+2026-04-19 22:48:39.054 [main] INFO  com.ticketing.agent.ai.AiModelService - DeepSeek模型初始化成功: deepseek-chat
+2026-04-19 22:48:39.786 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 初始化向量存储服务...
+2026-04-19 22:48:39.786 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 根据配置初始化嵌入模型: embeddingProvider=auto
+2026-04-19 22:48:39.787 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 尝试初始化本地 Ollama 嵌入模型...
+2026-04-19 22:48:42.369 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用本地 Ollama 嵌入模型成功: baseUrl=http://localhost:11434, modelName=bge-m3
+2026-04-19 22:48:42.528 [main] INFO  com.ticketing.agent.vector.VectorStoreService - Qdrant 向量存储初始化成功: host=106.54.15.105, httpPort=6333, collectionName=ticketing-faq, modelType=OLLAMA
+2026-04-19 22:48:42.789 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Starting...
+2026-04-19 22:48:43.253 [main] INFO  com.zaxxer.hikari.pool.HikariPool - TicketingHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e406e9b
+2026-04-19 22:48:43.256 [main] INFO  com.zaxxer.hikari.HikariDataSource - TicketingHikariPool - Start completed.
+2026-04-19 22:48:44.059 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 使用HTTP API获取向量库已有FAQ ID
+2026-04-19 22:48:44.233 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 成功获取向量库已有FAQ数量: 110
+2026-04-19 22:48:44.233 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 向量库中已有 FAQ 数量: 110
+2026-04-19 22:48:44.233 [main] INFO  com.ticketing.agent.vector.VectorStoreService - 所有 FAQ 已存在于向量库，跳过添加
+2026-04-19 22:48:44.234 [main] INFO  com.ticketing.service.ChatService - 初始化向量存储完成，加载 FAQ 数量: 110
+2026-04-19 22:48:45.273 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-04-19 22:48:45.571 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@610fcd51, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7473ecb2, org.springframework.security.web.context.SecurityContextHolderFilter@49c0d084, org.springframework.security.web.header.HeaderWriterFilter@60de800d, org.springframework.web.filter.CorsFilter@b529d7e, org.springframework.security.web.authentication.logout.LogoutFilter@2bb2e6b5, com.ticketing.config.RateLimitFilter@3eadad14, com.ticketing.config.JwtAuthenticationFilter@4e9e0c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43bd7c72, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b4dafce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4207cfd2, org.springframework.security.web.session.SessionManagementFilter@6e36a72a, org.springframework.security.web.access.ExceptionTranslationFilter@6e9502d2, org.springframework.security.web.access.intercept.AuthorizationFilter@41fef791]
+2026-04-19 22:48:47.066 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 22:48:49.138 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 22:48:49.271 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-19 22:48:49.289 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-04-19 22:48:50.594 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-04-19 22:48:50.596 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [106.54.15.105:5672]
+2026-04-19 22:48:50.792 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6a2e303f:0/SimpleConnection@20dc9c6b [delegate=amqp://rabbitmq@106.54.15.105:5672/, localPort=58926]
+2026-04-19 22:48:52.086 [main] INFO  com.ticketing.TicketingSystemApplication - Started TicketingSystemApplication in 17.467 seconds (process running for 17.988)
+2026-04-19 22:48:52.586 [scheduling-1] INFO  com.ticketing.agent.vector.VectorStoreService - 向量存储健康检查通过，返回结果数: 1
+2026-04-19 22:48:53.054 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-19 22:48:53.056 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-19 22:48:53.058 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-04-19 22:48:56.236 [scheduling-1] INFO  com.ticketing.agent.ai.AiModelService - AI模型健康检查通过: true
+2026-04-19 22:50:00.003 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 开始释放过期座位锁定
+2026-04-19 22:50:00.041 [scheduling-1] INFO  com.ticketing.task.SeatLockTask - 释放过期座位锁定完成
+2026-04-19 22:50:00.041 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 开始检查超时未支付订单
+2026-04-19 22:50:00.151 [scheduling-1] INFO  com.ticketing.task.OrderTimeoutTask - 检查超时未支付订单完成
+2026-04-19 22:50:08.826 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 22:50:08.860 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 22:50:08.893 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 22:50:08.926 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2026-04-19 22:50:08.953 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.

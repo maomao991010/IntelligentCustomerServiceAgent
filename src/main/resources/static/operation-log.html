@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作日志 - 演唱会票务系统</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .log-filters{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;align-items:flex-end}
+        .log-filters .filter-group{display:flex;flex-direction:column;gap:4px}
+        .log-filters label{font-size:13px;color:var(--text-secondary);font-weight:500}
+        .log-filters input,.log-filters select{padding:8px 12px;border:1px solid var(--border-color);border-radius:var(--border-radius-sm);font-size:14px}
+        .log-table{width:100%;border-collapse:collapse;background:var(--white);border-radius:var(--border-radius-sm);overflow:hidden}
+        .log-table th{background:var(--bg-secondary);padding:12px 14px;text-align:left;font-weight:600;font-size:13px;color:var(--text-secondary);border-bottom:2px solid var(--border-color)}
+        .log-table td{padding:10px 14px;border-bottom:1px solid var(--border-light);font-size:13px;color:var(--text-color);vertical-align:top}
+        .log-table tr:hover td{background:var(--primary-light)}
+        .type-badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:500}
+        .type-CREATE{background:#dcfce7;color:#166534}
+        .type-UPDATE{background:#dbeafe;color:#1e40af}
+        .type-DELETE{background:#fee2e2;color:#991b1b}
+        .type-LOGIN{background:#fef3c7;color:#92400e}
+        .type-LOGOUT{background:#f3e8ff;color:#6b21a8}
+        .type-QUERY{background:#e0e7ff;color:#3730a3}
+        .type-OTHER{background:#f3f4f6;color:#4b5563}
+        .status-ok{color:var(--success-color)}
+        .status-fail{color:var(--error-color)}
+        .pagination{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:20px}
+        .pagination button{padding:6px 14px;border:1px solid var(--border-color);border-radius:var(--border-radius-sm);background:var(--white);cursor:pointer;transition:var(--transition-fast)}
+        .pagination button:hover{border-color:var(--primary-color);color:var(--primary-color)}
+        .pagination button.active{background:var(--primary-color);color:#fff;border-color:var(--primary-color)}
+        .pagination button:disabled{opacity:.5;cursor:not-allowed}
+        .detail-toggle{color:var(--primary-color);cursor:pointer;font-size:12px}
+        .detail-content{display:none;background:var(--bg-secondary);padding:8px 12px;border-radius:4px;margin-top:4px;font-size:12px;word-break:break-all;max-height:120px;overflow-y:auto}
+        .detail-content.show{display:block}
+    </style>
+</head>
+<body>
+<div id="app">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">🎫 操作日志</div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="user-center.html" class="nav-link">用户中心</a>
+                <a href="operation-log.html" class="nav-link active">操作日志</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="admin-container">
+            <div class="page-header-section">
+                <h1>📋 操作日志审计</h1>
+            </div>
+
+            <div class="card" style="margin-bottom:20px">
+                <div class="card-body">
+                    <div class="log-filters">
+                        <div class="filter-group">
+                            <label>模块</label>
+                            <select id="filterModule">
+                                <option value="">全部</option>
+                                <option value="认证">认证</option>
+                                <option value="用户中心">用户中心</option>
+                                <option value="订单">订单</option>
+                                <option value="座位">座位</option>
+                                <option value="场次">场次</option>
+                                <option value="FAQ">FAQ</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>操作类型</label>
+                            <select id="filterType">
+                                <option value="">全部</option>
+                                <option value="CREATE">新增</option>
+                                <option value="UPDATE">修改</option>
+                                <option value="DELETE">删除</option>
+                                <option value="LOGIN">登录</option>
+                                <option value="LOGOUT">登出</option>
+                                <option value="QUERY">查询</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>开始时间</label>
+                            <input type="datetime-local" id="filterStartTime">
+                        </div>
+                        <div class="filter-group">
+                            <label>结束时间</label>
+                            <input type="datetime-local" id="filterEndTime">
+                        </div>
+                        <div class="filter-group" style="justify-content:flex-end">
+                            <button class="btn btn-primary" onclick="searchLogs()">查询</button>
+                            <button class="btn btn-secondary" onclick="resetFilters()" style="margin-left:8px">重置</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div id="logTableContainer">
+                        <div class="loading">加载中...</div>
+                    </div>
+                    <div class="pagination" id="pagination"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="js/api.js"></script>
+<script>
+    var currentPage = 1;
+    var pageSize = 15;
+
+    async function loadLogs() {
+        var container = document.getElementById('logTableContainer');
+        container.innerHTML = '<div class="loading">加载中...</div>';
+
+        var module = document.getElementById('filterModule').value;
+        var type = document.getElementById('filterType').value;
+        var startTime = document.getElementById('filterStartTime').value;
+        var endTime = document.getElementById('filterEndTime').value;
+
+        try {
+            var res = await api.operationLogs.getPage(currentPage, pageSize, null, module, type, startTime, endTime);
+            if (res.code === 200) {
+                renderTable(res.data);
+                renderPagination(res.data);
+            } else {
+                container.innerHTML = '<div style="text-align:center;padding:40px;color:var(--error-color)">' + (res.message || '加载失败') + '</div>';
+            }
+        } catch (e) {
+            container.innerHTML = '<div style="text-align:center;padding:40px;color:var(--error-color)">加载失败</div>';
+        }
+    }
+
+    function renderTable(pageData) {
+        var records = pageData.records || [];
+        if (records.length === 0) {
+            document.getElementById('logTableContainer').innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted)">暂无操作日志</div>';
+            return;
+        }
+
+        var html = '<table class="log-table"><thead><tr>' +
+            '<th>时间</th><th>用户ID</th><th>操作</th><th>模块</th><th>类型</th><th>请求</th><th>耗时</th><th>状态</th><th>详情</th>' +
+            '</tr></thead><tbody>';
+
+        records.forEach(function(log) {
+            var typeClass = 'type-' + (log.type || 'OTHER');
+            var statusHtml = log.status === 1 ? '<span class="status-ok">成功</span>' : '<span class="status-fail">失败</span>';
+            var duration = log.duration != null ? log.duration + 'ms' : '-';
+            var time = log.createTime ? log.createTime.replace('T', ' ').substring(0, 19) : '-';
+
+            html += '<tr>' +
+                '<td>' + time + '</td>' +
+                '<td>' + (log.userId || '-') + '</td>' +
+                '<td>' + (log.operation || '-') + '</td>' +
+                '<td>' + (log.module || '-') + '</td>' +
+                '<td><span class="type-badge ' + typeClass + '">' + (log.type || '-') + '</span></td>' +
+                '<td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="' + (log.requestUrl || '') + '">' + (log.requestMethod || '') + ' ' + (log.requestUrl || '-') + '</td>' +
+                '<td>' + duration + '</td>' +
+                '<td>' + statusHtml + '</td>' +
+                '<td><span class="detail-toggle" onclick="toggleDetail(this)">展开</span>' +
+                '<div class="detail-content">' +
+                (log.requestParams ? '<b>请求参数:</b> ' + log.requestParams + '<br>' : '') +
+                (log.errorMsg ? '<b style="color:var(--error-color)">错误信息:</b> ' + log.errorMsg + '<br>' : '') +
+                (log.ip ? '<b>IP:</b> ' + log.ip : '') +
+                '</div></td>' +
+                '</tr>';
+        });
+
+        html += '</tbody></table>';
+        document.getElementById('logTableContainer').innerHTML = html;
+    }
+
+    function renderPagination(pageData) {
+        var totalPages = pageData.pages || 1;
+        var container = document.getElementById('pagination');
+        if (totalPages <= 1) { container.innerHTML = ''; return; }
+
+        var html = '<button ' + (currentPage <= 1 ? 'disabled' : '') + ' onclick="goPage(' + (currentPage - 1) + ')">上一页</button>';
+        var start = Math.max(1, currentPage - 2);
+        var end = Math.min(totalPages, currentPage + 2);
+        for (var i = start; i <= end; i++) {
+            html += '<button class="' + (i === currentPage ? 'active' : '') + '" onclick="goPage(' + i + ')">' + i + '</button>';
+        }
+        html += '<button ' + (currentPage >= totalPages ? 'disabled' : '') + ' onclick="goPage(' + (currentPage + 1) + ')">下一页</button>';
+        container.innerHTML = html;
+    }
+
+    function goPage(page) { currentPage = page; loadLogs(); }
+    function searchLogs() { currentPage = 1; loadLogs(); }
+    function resetFilters() {
+        document.getElementById('filterModule').value = '';
+        document.getElementById('filterType').value = '';
+        document.getElementById('filterStartTime').value = '';
+        document.getElementById('filterEndTime').value = '';
+        currentPage = 1;
+        loadLogs();
+    }
+
+    function toggleDetail(el) {
+        var content = el.nextElementSibling;
+        if (content.classList.contains('show')) {
+            content.classList.remove('show');
+            el.textContent = '展开';
+        } else {
+            content.classList.add('show');
+            el.textContent = '收起';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var token = localStorage.getItem('token');
+        if (!token) { window.location.href = 'login.html'; return; }
+        loadLogs();
+    });
+</script>
+</body>
+</html>
